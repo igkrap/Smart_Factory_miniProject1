@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="19.11.0" />
   </ItemGroup>
 
 </Project>
