@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace Smart_Factory_miniProject1
 {
-    public partial class MakeForm : MetroForm
+    public partial class SelectForm : MetroForm
     {
-        public MakeForm()
+        public SelectForm()
         {
             InitializeComponent();
         }

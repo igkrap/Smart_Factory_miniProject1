@@ -1,7 +1,7 @@
 ﻿
 namespace Smart_Factory_miniProject1
 {
-    partial class MakeForm
+    partial class SelectForm
     {
         /// <summary>
         /// Required designer variable.
