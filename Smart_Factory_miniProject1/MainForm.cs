@@ -16,7 +16,22 @@ namespace Smart_Factory_miniProject1
         public MainForm()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            metroLabel1.Text = DateTime.Now.ToLongDateString()+DateTime.Now.ToLongTimeString();
+        }
+
+        private void guna2ProgressBar1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

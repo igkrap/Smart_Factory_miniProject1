@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net4.7.2</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.1.4" />
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
     <PackageReference Include="Oracle.ManagedDataAccess" Version="19.11.0" />
   </ItemGroup>
