@@ -16,7 +16,9 @@ namespace Smart_Factory_miniProject1
     {
         OracleConnection conn;
         OracleCommand cmd;
-
+        SelectForm form3;
+        string select1 = "", select2 = "", select3 = "";
+        int amount=0;
         public MainForm()
         {
             InitializeComponent();
@@ -165,7 +167,31 @@ namespace Smart_Factory_miniProject1
         {
             metroLabel1.Text = DateTime.Now.ToString();
         }
-          
-        
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(select1 + " " + select2 + " " + select3);
+        }
+
+        private void btnSelectForm_Click(object sender, EventArgs e)
+        {
+            
+                form3 = new SelectForm();
+                form3.FormSendEvent += new SelectForm.FormSendDataHandler(DieaseUpdateEventMethod);
+                form3.Show();
+            //oraclesearch();
+
+        }
+        private void DieaseUpdateEventMethod(object sender)
+        {
+            string[] arr = ((string)sender).Split('/');
+            select1 = arr[0];
+            select2 = arr[1];
+            select3 = arr[2];
+            amount = int.Parse(arr[3]);
+            form3.Close();
+            //flag = false;
+            //Run();
+        }
     }   
 }

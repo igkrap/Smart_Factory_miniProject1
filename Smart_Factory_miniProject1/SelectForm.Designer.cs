@@ -79,7 +79,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton2.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton2.CheckedChanged += new System.EventHandler(this.Select_RadioButton2_CheckedChanged);
             // 
             // Select_RadioButton3
             // 
@@ -98,7 +97,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton3.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton3.CheckedChanged += new System.EventHandler(this.Select_RadioButton3_CheckedChanged);
             // 
             // Select_RadioButton1
             // 
@@ -119,7 +117,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton1.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton1.CheckedChanged += new System.EventHandler(this.Select_RadioButton1_CheckedChanged);
             // 
             // guna2GroupBox2
             // 
@@ -153,7 +150,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton6.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton6.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton6.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton6.CheckedChanged += new System.EventHandler(this.Select_RadioButton6_CheckedChanged);
             // 
             // Select_RadioButton7
             // 
@@ -172,7 +168,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton7.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton7.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton7.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton7.CheckedChanged += new System.EventHandler(this.Select_RadioButton7_CheckedChanged);
             // 
             // Select_RadioButton5
             // 
@@ -193,7 +188,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton5.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton5.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton5.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton5.CheckedChanged += new System.EventHandler(this.Select_RadioButton5_CheckedChanged);
             // 
             // guna2GroupBox3
             // 
@@ -226,7 +220,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton9.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton9.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton9.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton9.CheckedChanged += new System.EventHandler(this.Select_RadioButton9_CheckedChanged);
             // 
             // Select_RadioButton8
             // 
@@ -247,7 +240,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton8.UncheckedState.BorderThickness = 2;
             this.Select_RadioButton8.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton8.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton8.CheckedChanged += new System.EventHandler(this.Select_RadioButton8_CheckedChanged);
             // 
             // Select_TextBox
             // 
