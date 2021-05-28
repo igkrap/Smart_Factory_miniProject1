@@ -58,33 +58,46 @@ namespace Smart_Factory_miniProject1
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.B_Vanilla_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSelectForm = new Guna.UI2.WinForms.Guna2Button();
+            this.btnADDForm = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Barrel = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Barrel_Label = new MetroFramework.Controls.MetroLabel();
             this.Cone = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Cone_Label = new MetroFramework.Controls.MetroLabel();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Vanilla_Soft = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Vanilla_Label = new MetroFramework.Controls.MetroLabel();
             this.Straw_Soft = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Straw_Label = new MetroFramework.Controls.MetroLabel();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Stick = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Stick_Label = new MetroFramework.Controls.MetroLabel();
             this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Choco_Soft = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Choco_Label = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.btnADDForm = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSelectForm = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.producing = new MetroFramework.Controls.MetroLabel();
             this.groupBox3.SuspendLayout();
+            this.Barrel.SuspendLayout();
+            this.Cone.SuspendLayout();
+            this.Vanilla_Soft.SuspendLayout();
+            this.Straw_Soft.SuspendLayout();
+            this.Stick.SuspendLayout();
+            this.Choco_Soft.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +108,7 @@ namespace Smart_Factory_miniProject1
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(728, 16);
+            this.metroLabel1.Location = new System.Drawing.Point(862, 20);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(84, 20);
             this.metroLabel1.TabIndex = 3;
@@ -104,16 +117,18 @@ namespace Smart_Factory_miniProject1
             // 
             // guna2CircleProgressBar1
             // 
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(219, 310);
+            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(297, 329);
             this.guna2CircleProgressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.guna2CircleProgressBar1.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleProgressBar1.ShadowDecoration.Parent = this.guna2CircleProgressBar1;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(150, 150);
+            this.guna2CircleProgressBar1.ShowPercentage = true;
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(137, 150);
             this.guna2CircleProgressBar1.TabIndex = 4;
             this.guna2CircleProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2CircleProgressBar1.Value = 50;
             // 
             // S_Straw_Product
             // 
@@ -384,6 +399,69 @@ namespace Smart_Factory_miniProject1
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(6, 288);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(101, 51);
+            this.guna2Button2.TabIndex = 3;
+            this.guna2Button2.Text = "생산 중단";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(6, 198);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(101, 48);
+            this.guna2Button1.TabIndex = 2;
+            this.guna2Button1.Text = "생산 시작";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btnSelectForm
+            // 
+            this.btnSelectForm.CheckedState.Parent = this.btnSelectForm;
+            this.btnSelectForm.CustomImages.Parent = this.btnSelectForm;
+            this.btnSelectForm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSelectForm.ForeColor = System.Drawing.Color.White;
+            this.btnSelectForm.HoverState.Parent = this.btnSelectForm;
+            this.btnSelectForm.Location = new System.Drawing.Point(6, 116);
+            this.btnSelectForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSelectForm.Name = "btnSelectForm";
+            this.btnSelectForm.ShadowDecoration.Parent = this.btnSelectForm;
+            this.btnSelectForm.Size = new System.Drawing.Size(101, 46);
+            this.btnSelectForm.TabIndex = 1;
+            this.btnSelectForm.Text = "재료 선택";
+            this.btnSelectForm.Click += new System.EventHandler(this.btnSelectForm_Click);
+            // 
+            // btnADDForm
+            // 
+            this.btnADDForm.CheckedState.Parent = this.btnADDForm;
+            this.btnADDForm.CustomImages.Parent = this.btnADDForm;
+            this.btnADDForm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnADDForm.ForeColor = System.Drawing.Color.White;
+            this.btnADDForm.HoverState.Parent = this.btnADDForm;
+            this.btnADDForm.Location = new System.Drawing.Point(7, 59);
+            this.btnADDForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnADDForm.Name = "btnADDForm";
+            this.btnADDForm.ShadowDecoration.Parent = this.btnADDForm;
+            this.btnADDForm.Size = new System.Drawing.Size(101, 51);
+            this.btnADDForm.TabIndex = 0;
+            this.btnADDForm.Text = "재료 추가";
+            this.btnADDForm.Click += new System.EventHandler(this.btnADDForm_Click);
+            // 
             // guna2HtmlLabel24
             // 
             this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
@@ -406,6 +484,7 @@ namespace Smart_Factory_miniProject1
             // 
             // Barrel
             // 
+            this.Barrel.Controls.Add(this.Barrel_Label);
             this.Barrel.FillThickness = 12;
             this.Barrel.Location = new System.Drawing.Point(378, 155);
             this.Barrel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -420,8 +499,20 @@ namespace Smart_Factory_miniProject1
             this.Barrel.TabIndex = 19;
             this.Barrel.Value = 50;
             // 
+            // Barrel_Label
+            // 
+            this.Barrel_Label.AutoSize = true;
+            this.Barrel_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Barrel_Label.Location = new System.Drawing.Point(2, 41);
+            this.Barrel_Label.Name = "Barrel_Label";
+            this.Barrel_Label.Size = new System.Drawing.Size(98, 20);
+            this.Barrel_Label.TabIndex = 27;
+            this.Barrel_Label.Text = "metroLabel6";
+            this.Barrel_Label.Visible = false;
+            // 
             // Cone
             // 
+            this.Cone.Controls.Add(this.Cone_Label);
             this.Cone.FillThickness = 12;
             this.Cone.Location = new System.Drawing.Point(215, 155);
             this.Cone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -435,6 +526,17 @@ namespace Smart_Factory_miniProject1
             this.Cone.Size = new System.Drawing.Size(101, 100);
             this.Cone.TabIndex = 19;
             this.Cone.Value = 50;
+            // 
+            // Cone_Label
+            // 
+            this.Cone_Label.AutoSize = true;
+            this.Cone_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Cone_Label.Location = new System.Drawing.Point(3, 41);
+            this.Cone_Label.Name = "Cone_Label";
+            this.Cone_Label.Size = new System.Drawing.Size(98, 20);
+            this.Cone_Label.TabIndex = 26;
+            this.Cone_Label.Text = "metroLabel5";
+            this.Cone_Label.Visible = false;
             // 
             // guna2HtmlLabel25
             // 
@@ -458,10 +560,14 @@ namespace Smart_Factory_miniProject1
             // 
             // Vanilla_Soft
             // 
+            this.Vanilla_Soft.Controls.Add(this.Vanilla_Label);
             this.Vanilla_Soft.FillThickness = 12;
+            this.Vanilla_Soft.ForeColor = System.Drawing.Color.MistyRose;
             this.Vanilla_Soft.Location = new System.Drawing.Point(379, 30);
             this.Vanilla_Soft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Vanilla_Soft.Name = "Vanilla_Soft";
+            this.Vanilla_Soft.ProgressColor = System.Drawing.Color.MistyRose;
+            this.Vanilla_Soft.ProgressColor2 = System.Drawing.Color.MistyRose;
             this.Vanilla_Soft.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
             this.Vanilla_Soft.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
             this.Vanilla_Soft.ProgressThickness = 12;
@@ -472,9 +578,24 @@ namespace Smart_Factory_miniProject1
             this.Vanilla_Soft.TabIndex = 17;
             this.Vanilla_Soft.Value = 50;
             // 
+            // Vanilla_Label
+            // 
+            this.Vanilla_Label.AutoSize = true;
+            this.Vanilla_Label.CustomForeColor = true;
+            this.Vanilla_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Vanilla_Label.Location = new System.Drawing.Point(1, 36);
+            this.Vanilla_Label.Name = "Vanilla_Label";
+            this.Vanilla_Label.Size = new System.Drawing.Size(98, 20);
+            this.Vanilla_Label.TabIndex = 28;
+            this.Vanilla_Label.Text = "metroLabel7";
+            this.Vanilla_Label.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Vanilla_Label.Visible = false;
+            // 
             // Straw_Soft
             // 
+            this.Straw_Soft.Controls.Add(this.Straw_Label);
             this.Straw_Soft.FillThickness = 12;
+            this.Straw_Soft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Straw_Soft.Location = new System.Drawing.Point(216, 30);
             this.Straw_Soft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Straw_Soft.Name = "Straw_Soft";
@@ -490,6 +611,19 @@ namespace Smart_Factory_miniProject1
             this.Straw_Soft.TabIndex = 17;
             this.Straw_Soft.Value = 50;
             // 
+            // Straw_Label
+            // 
+            this.Straw_Label.AutoSize = true;
+            this.Straw_Label.CustomForeColor = true;
+            this.Straw_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Straw_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Straw_Label.Location = new System.Drawing.Point(5, 36);
+            this.Straw_Label.Name = "Straw_Label";
+            this.Straw_Label.Size = new System.Drawing.Size(98, 20);
+            this.Straw_Label.TabIndex = 25;
+            this.Straw_Label.Text = "metroLabel4";
+            this.Straw_Label.Visible = false;
+            // 
             // guna2HtmlLabel20
             // 
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
@@ -502,6 +636,8 @@ namespace Smart_Factory_miniProject1
             // 
             // Stick
             // 
+            this.Stick.AutoScroll = true;
+            this.Stick.Controls.Add(this.Stick_Label);
             this.Stick.FillThickness = 12;
             this.Stick.Location = new System.Drawing.Point(54, 155);
             this.Stick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -516,6 +652,17 @@ namespace Smart_Factory_miniProject1
             this.Stick.TabIndex = 15;
             this.Stick.Value = 50;
             // 
+            // Stick_Label
+            // 
+            this.Stick_Label.AutoSize = true;
+            this.Stick_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Stick_Label.Location = new System.Drawing.Point(0, 40);
+            this.Stick_Label.Name = "Stick_Label";
+            this.Stick_Label.Size = new System.Drawing.Size(98, 20);
+            this.Stick_Label.TabIndex = 24;
+            this.Stick_Label.Text = "metroLabel3";
+            this.Stick_Label.Visible = false;
+            // 
             // guna2HtmlLabel23
             // 
             this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
@@ -528,7 +675,9 @@ namespace Smart_Factory_miniProject1
             // 
             // Choco_Soft
             // 
+            this.Choco_Soft.Controls.Add(this.Choco_Label);
             this.Choco_Soft.FillThickness = 12;
+            this.Choco_Soft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.Choco_Soft.Location = new System.Drawing.Point(55, 30);
             this.Choco_Soft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Choco_Soft.Name = "Choco_Soft";
@@ -544,11 +693,24 @@ namespace Smart_Factory_miniProject1
             this.Choco_Soft.TabIndex = 13;
             this.Choco_Soft.Value = 50;
             // 
+            // Choco_Label
+            // 
+            this.Choco_Label.AutoSize = true;
+            this.Choco_Label.CustomForeColor = true;
+            this.Choco_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Choco_Label.Location = new System.Drawing.Point(3, 36);
+            this.Choco_Label.Name = "Choco_Label";
+            this.Choco_Label.Size = new System.Drawing.Size(98, 20);
+            this.Choco_Label.Style = MetroFramework.MetroColorStyle.Brown;
+            this.Choco_Label.TabIndex = 23;
+            this.Choco_Label.Text = "metroLabel2";
+            this.Choco_Label.Visible = false;
+            // 
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.ItemSize = new System.Drawing.Size(100, 30);
             this.metroTabControl1.Location = new System.Drawing.Point(699, 56);
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -579,27 +741,6 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarSize = 11;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.C_Straw_Product);
-            this.metroTabPage2.Controls.Add(this.C_Total_Product);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel5);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel8);
-            this.metroTabPage2.Controls.Add(this.C_Choco_Product);
-            this.metroTabPage2.Controls.Add(this.C_Vanilla_Product);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel6);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel7);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarSize = 12;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 34);
-            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(339, 192);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "콘";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarSize = 11;
-            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.B_Straw_Product);
@@ -620,6 +761,27 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage3.Text = "통";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarSize = 11;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.C_Straw_Product);
+            this.metroTabPage2.Controls.Add(this.C_Total_Product);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel5);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel8);
+            this.metroTabPage2.Controls.Add(this.C_Choco_Product);
+            this.metroTabPage2.Controls.Add(this.C_Vanilla_Product);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel6);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel7);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarSize = 12;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 34);
+            this.metroTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(339, 192);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "콘";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarSize = 11;
             // 
             // guna2GroupBox2
             // 
@@ -648,69 +810,24 @@ namespace Smart_Factory_miniProject1
             this.guna2GroupBox2.Size = new System.Drawing.Size(526, 290);
             this.guna2GroupBox2.TabIndex = 22;
             this.guna2GroupBox2.Text = "재고";
+            this.guna2GroupBox2.Click += new System.EventHandler(this.guna2GroupBox2_Click);
             // 
-            // btnADDForm
+            // producing
             // 
-            this.btnADDForm.CheckedState.Parent = this.btnADDForm;
-            this.btnADDForm.CustomImages.Parent = this.btnADDForm;
-            this.btnADDForm.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnADDForm.ForeColor = System.Drawing.Color.White;
-            this.btnADDForm.HoverState.Parent = this.btnADDForm;
-            this.btnADDForm.Location = new System.Drawing.Point(7, 59);
-            this.btnADDForm.Name = "btnADDForm";
-            this.btnADDForm.ShadowDecoration.Parent = this.btnADDForm;
-            this.btnADDForm.Size = new System.Drawing.Size(101, 51);
-            this.btnADDForm.TabIndex = 0;
-            this.btnADDForm.Text = "재료 추가";
-            // 
-            // btnSelectForm
-            // 
-            this.btnSelectForm.CheckedState.Parent = this.btnSelectForm;
-            this.btnSelectForm.CustomImages.Parent = this.btnSelectForm;
-            this.btnSelectForm.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSelectForm.ForeColor = System.Drawing.Color.White;
-            this.btnSelectForm.HoverState.Parent = this.btnSelectForm;
-            this.btnSelectForm.Location = new System.Drawing.Point(6, 116);
-            this.btnSelectForm.Name = "btnSelectForm";
-            this.btnSelectForm.ShadowDecoration.Parent = this.btnSelectForm;
-            this.btnSelectForm.Size = new System.Drawing.Size(101, 46);
-            this.btnSelectForm.TabIndex = 1;
-            this.btnSelectForm.Text = "재료 선택";
-            this.btnSelectForm.Click += new System.EventHandler(this.btnSelectForm_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(6, 198);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(101, 48);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "생산 시작";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(6, 287);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(101, 51);
-            this.guna2Button2.TabIndex = 3;
-            this.guna2Button2.Text = "생산 중단";
+            this.producing.AutoSize = true;
+            this.producing.CustomForeColor = true;
+            this.producing.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.producing.Location = new System.Drawing.Point(329, 481);
+            this.producing.Name = "producing";
+            this.producing.Size = new System.Drawing.Size(0, 0);
+            this.producing.TabIndex = 23;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 542);
+            this.Controls.Add(this.producing);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.groupBox3);
@@ -720,13 +837,25 @@ namespace Smart_Factory_miniProject1
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(18, 75, 18, 15);
             this.groupBox3.ResumeLayout(false);
+            this.Barrel.ResumeLayout(false);
+            this.Barrel.PerformLayout();
+            this.Cone.ResumeLayout(false);
+            this.Cone.PerformLayout();
+            this.Vanilla_Soft.ResumeLayout(false);
+            this.Vanilla_Soft.PerformLayout();
+            this.Straw_Soft.ResumeLayout(false);
+            this.Straw_Soft.PerformLayout();
+            this.Stick.ResumeLayout(false);
+            this.Stick.PerformLayout();
+            this.Choco_Soft.ResumeLayout(false);
+            this.Choco_Soft.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
-            this.metroTabPage2.ResumeLayout(false);
-            this.metroTabPage2.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
             this.metroTabPage3.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -785,6 +914,13 @@ namespace Smart_Factory_miniProject1
         private Guna.UI2.WinForms.Guna2Button btnADDForm;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private MetroFramework.Controls.MetroLabel Barrel_Label;
+        private MetroFramework.Controls.MetroLabel Cone_Label;
+        private MetroFramework.Controls.MetroLabel Vanilla_Label;
+        private MetroFramework.Controls.MetroLabel Straw_Label;
+        private MetroFramework.Controls.MetroLabel Stick_Label;
+        private MetroFramework.Controls.MetroLabel Choco_Label;
+        private MetroFramework.Controls.MetroLabel producing;
     }
 }
 
