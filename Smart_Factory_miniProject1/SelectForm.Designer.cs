@@ -37,14 +37,11 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton6 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Select_RadioButton7 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Select_RadioButton5 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.Select_RadioButton9 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.Select_RadioButton8 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.Select_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.Select_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.label_watermark = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
-            this.guna2GroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
@@ -189,58 +186,6 @@ namespace Smart_Factory_miniProject1
             this.Select_RadioButton5.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.Select_RadioButton5.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
-            // guna2GroupBox3
-            // 
-            this.guna2GroupBox3.Controls.Add(this.Select_RadioButton9);
-            this.guna2GroupBox3.Controls.Add(this.Select_RadioButton8);
-            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox3.Location = new System.Drawing.Point(80, 296);
-            this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
-            this.guna2GroupBox3.Size = new System.Drawing.Size(300, 120);
-            this.guna2GroupBox3.TabIndex = 2;
-            this.guna2GroupBox3.Text = "포장지";
-            this.guna2GroupBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Select_RadioButton9
-            // 
-            this.Select_RadioButton9.AutoSize = true;
-            this.Select_RadioButton9.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Select_RadioButton9.CheckedState.BorderThickness = 0;
-            this.Select_RadioButton9.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Select_RadioButton9.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Select_RadioButton9.CheckedState.InnerOffset = -4;
-            this.Select_RadioButton9.Location = new System.Drawing.Point(192, 72);
-            this.Select_RadioButton9.Name = "Select_RadioButton9";
-            this.Select_RadioButton9.Size = new System.Drawing.Size(60, 24);
-            this.Select_RadioButton9.TabIndex = 1;
-            this.Select_RadioButton9.Text = "비닐";
-            this.Select_RadioButton9.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Select_RadioButton9.UncheckedState.BorderThickness = 2;
-            this.Select_RadioButton9.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton9.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
-            // Select_RadioButton8
-            // 
-            this.Select_RadioButton8.AutoSize = true;
-            this.Select_RadioButton8.Checked = true;
-            this.Select_RadioButton8.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Select_RadioButton8.CheckedState.BorderThickness = 0;
-            this.Select_RadioButton8.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Select_RadioButton8.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.Select_RadioButton8.CheckedState.InnerOffset = -4;
-            this.Select_RadioButton8.Location = new System.Drawing.Point(48, 72);
-            this.Select_RadioButton8.Name = "Select_RadioButton8";
-            this.Select_RadioButton8.Size = new System.Drawing.Size(90, 24);
-            this.Select_RadioButton8.TabIndex = 0;
-            this.Select_RadioButton8.TabStop = true;
-            this.Select_RadioButton8.Text = "플라스틱";
-            this.Select_RadioButton8.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.Select_RadioButton8.UncheckedState.BorderThickness = 2;
-            this.Select_RadioButton8.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.Select_RadioButton8.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
             // Select_TextBox
             // 
             this.Select_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -255,7 +200,7 @@ namespace Smart_Factory_miniProject1
             this.Select_TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Select_TextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Select_TextBox.HoverState.Parent = this.Select_TextBox;
-            this.Select_TextBox.Location = new System.Drawing.Point(464, 304);
+            this.Select_TextBox.Location = new System.Drawing.Point(169, 334);
             this.Select_TextBox.Name = "Select_TextBox";
             this.Select_TextBox.PasswordChar = '\0';
             this.Select_TextBox.PlaceholderText = "";
@@ -263,6 +208,7 @@ namespace Smart_Factory_miniProject1
             this.Select_TextBox.ShadowDecoration.Parent = this.Select_TextBox;
             this.Select_TextBox.Size = new System.Drawing.Size(200, 36);
             this.Select_TextBox.TabIndex = 3;
+            this.Select_TextBox.TextChanged += new System.EventHandler(this.Select_TextBox_TextChanged);
             // 
             // Select_Button
             // 
@@ -271,7 +217,7 @@ namespace Smart_Factory_miniProject1
             this.Select_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Select_Button.ForeColor = System.Drawing.Color.White;
             this.Select_Button.HoverState.Parent = this.Select_Button;
-            this.Select_Button.Location = new System.Drawing.Point(472, 360);
+            this.Select_Button.Location = new System.Drawing.Point(424, 327);
             this.Select_Button.Name = "Select_Button";
             this.Select_Button.ShadowDecoration.Parent = this.Select_Button;
             this.Select_Button.Size = new System.Drawing.Size(184, 45);
@@ -279,14 +225,27 @@ namespace Smart_Factory_miniProject1
             this.Select_Button.Text = "선택 완료";
             this.Select_Button.Click += new System.EventHandler(this.Select_Button_Click);
             // 
+            // label_watermark
+            // 
+            this.label_watermark.AutoSize = true;
+            this.label_watermark.BackColor = System.Drawing.Color.White;
+            this.label_watermark.Enabled = false;
+            this.label_watermark.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label_watermark.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label_watermark.Location = new System.Drawing.Point(184, 344);
+            this.label_watermark.Name = "label_watermark";
+            this.label_watermark.Size = new System.Drawing.Size(167, 15);
+            this.label_watermark.TabIndex = 5;
+            this.label_watermark.Text = "미입력시 최대수량 생산";
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_watermark);
             this.Controls.Add(this.Select_Button);
             this.Controls.Add(this.Select_TextBox);
-            this.Controls.Add(this.guna2GroupBox3);
             this.Controls.Add(this.guna2GroupBox2);
             this.Controls.Add(this.guna2GroupBox1);
             this.Name = "SelectForm";
@@ -296,9 +255,8 @@ namespace Smart_Factory_miniProject1
             this.guna2GroupBox1.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
-            this.guna2GroupBox3.ResumeLayout(false);
-            this.guna2GroupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -312,10 +270,8 @@ namespace Smart_Factory_miniProject1
         private Guna.UI2.WinForms.Guna2RadioButton Select_RadioButton6;
         private Guna.UI2.WinForms.Guna2RadioButton Select_RadioButton7;
         private Guna.UI2.WinForms.Guna2RadioButton Select_RadioButton5;
-        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private Guna.UI2.WinForms.Guna2RadioButton Select_RadioButton9;
-        private Guna.UI2.WinForms.Guna2RadioButton Select_RadioButton8;
         private Guna.UI2.WinForms.Guna2TextBox Select_TextBox;
         private Guna.UI2.WinForms.Guna2Button Select_Button;
+        private System.Windows.Forms.Label label_watermark;
     }
 }

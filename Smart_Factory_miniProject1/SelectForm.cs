@@ -22,8 +22,9 @@ namespace Smart_Factory_miniProject1
         public SelectForm()
         {
             InitializeComponent();
+           
         }
-
+        
         private void Select_Button_Click(object sender, EventArgs e)
         {
             num = Select_TextBox.Text;
@@ -49,6 +50,9 @@ namespace Smart_Factory_miniProject1
             this.Close();
         }
 
-        
+        private void Select_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            label_watermark.Visible = Select_TextBox.Text.Length < 1;
+        }
     }
 }
