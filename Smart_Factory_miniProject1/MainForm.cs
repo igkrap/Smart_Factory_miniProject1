@@ -16,6 +16,7 @@ namespace Smart_Factory_miniProject1
     {
         OracleConnection conn;
         OracleCommand cmd;
+        
         public MainForm()
         {
             InitializeComponent();
@@ -29,10 +30,11 @@ namespace Smart_Factory_miniProject1
             cmd=new OracleCommand();
             Oraclesearch();
         }
-
+        
         
         void Oraclesearch()
         {
+            //생산량 현황
             cmd.Connection = conn;
             cmd.CommandText = "select VOL from ICE_CREAM where ID=901";
             OracleDataReader odr1 = cmd.ExecuteReader();
@@ -105,8 +107,57 @@ namespace Smart_Factory_miniProject1
                 int VOL = odr9.GetInt32(0);
                 B_Straw_Product.Value = VOL;
             }
-            
+
+            //재고현황
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1101";
+            OracleDataReader rdr1 = cmd.ExecuteReader();
+            while (rdr1.Read())
+            {
+                int VOL = rdr1.GetInt32(0);
+                Choco_Soft.Value = VOL;
+            }
+
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1102";
+            OracleDataReader rdr2 = cmd.ExecuteReader();
+            while (rdr2.Read())
+            {
+                int VOL = rdr2.GetInt32(0);
+                Straw_Soft.Value = VOL;
+            }
+
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1103";
+            OracleDataReader rdr3 = cmd.ExecuteReader();
+            while (rdr3.Read())
+            {
+                int VOL = rdr3.GetInt32(0);
+                Vanilla_Soft.Value = VOL;
+            }
+
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1001";
+            OracleDataReader rdr4 = cmd.ExecuteReader();
+            while (rdr4.Read())
+            {
+                int VOL = rdr4.GetInt32(0);
+                Stick.Value = VOL;
+            }
+
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1002";
+            OracleDataReader rdr5 = cmd.ExecuteReader();
+            while (rdr5.Read())
+            {
+                int VOL = rdr5.GetInt32(0);
+                Cone.Value = VOL;
+            }
+             
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1003";
+            OracleDataReader rdr6 = cmd.ExecuteReader();
+            while (rdr6.Read())
+            {
+                int VOL = rdr6.GetInt32(0);
+                Barrel.Value = VOL;
+            }
         }
+        
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -123,6 +174,6 @@ namespace Smart_Factory_miniProject1
 
         }
 
-        
+       
     }
 }
