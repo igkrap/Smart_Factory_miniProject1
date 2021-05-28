@@ -13,9 +13,42 @@ namespace Smart_Factory_miniProject1
 {
     public partial class SelectForm : MetroForm
     {
+        public delegate void FormSendDataHandler(string sendstring);
+        public event FormSendDataHandler FormSendEvent;
+        private string selected1 = "";
+        private string selected2 = "";
+        private string selected3 = "";
+        private string num = "";
         public SelectForm()
         {
             InitializeComponent();
         }
+
+        private void Select_Button_Click(object sender, EventArgs e)
+        {
+            num = Select_TextBox.Text;
+
+            if (Select_RadioButton1.Checked) selected1 = Select_RadioButton1.Text;
+            if (Select_RadioButton2.Checked) selected1 = Select_RadioButton2.Text;
+            if (Select_RadioButton3.Checked) selected1 = Select_RadioButton3.Text;
+            if (Select_RadioButton5.Checked) selected2 = Select_RadioButton5.Text;
+            if (Select_RadioButton6.Checked) selected2 = Select_RadioButton6.Text;
+            if (Select_RadioButton7.Checked) selected2 = Select_RadioButton7.Text;
+            if (Select_RadioButton8.Checked) selected3 = Select_RadioButton8.Text;
+            if (Select_RadioButton9.Checked) selected3 = Select_RadioButton9.Text;
+            if (num != "")
+            {
+                
+                MessageBox.Show(selected1 + " " + selected2 + " " + selected3);
+                this.FormSendEvent($"{selected1}/{selected2}/{selected3}/{num}");
+            }
+            else
+            {
+                this.FormSendEvent($"{selected1}/{selected2}/{selected3}/-1");
+            }
+            this.Close();
+        }
+
+        
     }
 }
