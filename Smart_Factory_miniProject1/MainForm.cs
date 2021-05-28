@@ -18,10 +18,12 @@ namespace Smart_Factory_miniProject1
         OracleConnection conn;
         OracleCommand cmd;
         SelectForm form3;
+        static Thread t1;
         string select1 = "", select2 = "", select3 = "";
         string[,] products = { { "초코바", "초코콘", "초코통아이스크림" },
                                 { "딸기바", "딸기콘", "딸기통아이스크림" },
                                 { "바닐라바", "바닐라콘", "바닐라통아이스크림" } };
+        Guna.UI2.WinForms.Guna2ProgressBar productbar ;
         Guna.UI2.WinForms.Guna2CircleProgressBar flavour;
         Guna.UI2.WinForms.Guna2CircleProgressBar scb;
         Guna.UI2.WinForms.Guna2CircleProgressBar package;
@@ -39,7 +41,6 @@ namespace Smart_Factory_miniProject1
             // 명령 객체 생성
             cmd = new OracleCommand();
             Oraclesearch();
-
         }
 
 
@@ -55,7 +56,7 @@ namespace Smart_Factory_miniProject1
                 S_Choco_Product.Value = VOL;
             }
 
-            cmd.CommandText = "select VOL from ICE_CREAM where ID=902";
+            cmd.CommandText = "select VOL from ICE_CREAM where ID=903";
             OracleDataReader odr2 = cmd.ExecuteReader();
             while (odr2.Read())
             {
@@ -63,7 +64,7 @@ namespace Smart_Factory_miniProject1
                 S_Vanilla_Product.Value = VOL;
             }
 
-            cmd.CommandText = "select VOL from ICE_CREAM where ID=903";
+            cmd.CommandText = "select VOL from ICE_CREAM where ID=902";
             OracleDataReader odr3 = cmd.ExecuteReader();
             while (odr3.Read())
             {
@@ -79,7 +80,7 @@ namespace Smart_Factory_miniProject1
                 C_Choco_Product.Value = VOL;
             }
 
-            cmd.CommandText = "select VOL from ICE_CREAM where ID=912";
+            cmd.CommandText = "select VOL from ICE_CREAM where ID=913";
             OracleDataReader odr5 = cmd.ExecuteReader();
             while (odr5.Read())
             {
@@ -87,7 +88,7 @@ namespace Smart_Factory_miniProject1
                 C_Vanilla_Product.Value = VOL;
             }
 
-            cmd.CommandText = "select VOL from ICE_CREAM where ID=913";
+            cmd.CommandText = "select VOL from ICE_CREAM where ID=912";
             OracleDataReader odr6 = cmd.ExecuteReader();
             while (odr6.Read())
             {
@@ -103,7 +104,7 @@ namespace Smart_Factory_miniProject1
                 B_Choco_Product.Value = VOL;
             }
 
-            cmd.CommandText = "select VOL from ICE_CREAM where ID=932";
+            cmd.CommandText = "select VOL from ICE_CREAM where ID=933";
             OracleDataReader odr8 = cmd.ExecuteReader();
             while (odr8.Read())
             {
@@ -111,7 +112,7 @@ namespace Smart_Factory_miniProject1
                 B_Vanilla_Product.Value = VOL;
             }
 
-            cmd.CommandText = "select VOL from ICE_CREAM where ID=933";
+            cmd.CommandText = "select VOL from ICE_CREAM where ID=932";
             OracleDataReader odr9 = cmd.ExecuteReader();
             while (odr9.Read())
             {
@@ -185,11 +186,38 @@ namespace Smart_Factory_miniProject1
         {
             
             if (select1 == "" && select2 == "" && select3 == "") { MessageBox.Show("재료가 선택되지 않았습니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
-            else if (flavour.Value <= 0)  { MessageBox.Show(flavour.Name+"가 부족합니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
-            else if(scb.Value<=0){ MessageBox.Show(scb.Name + "가 부족합니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
+            else if (flavour.Value <= 0)  { MessageBox.Show(flavour.Name+"(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            else if(scb.Value<=0){ MessageBox.Show(scb.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            //else if (package.Value <= 0) { MessageBox.Show(package.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
             else{
-                Run();
+                if (t1 == null)
+                {
+                    t1 = new Thread(new ThreadStart(Run));
+                    t1.Start();
+                }
+                else
+                {
+                    MessageBox.Show("이미 생산하고 있습니다");
+                }
             }
+        }
+        private void useIngredient(Guna.UI2.WinForms.Guna2CircleProgressBar pb, int id)
+        {
+            // SQL문 지정 및 INSERT 실행
+            // 검은펜 심
+            //update ingredient set vol = 0;
+            pb.Value -= 1;
+            cmd.CommandText = $"update ingredient set vol = {pb.Value} where ID = {id}";
+            cmd.ExecuteNonQuery();
+        }
+        private void addProduct(Guna.UI2.WinForms.Guna2ProgressBar pb, int id)
+        {
+            // SQL문 지정 및 INSERT 실행
+            // 검은펜 심
+            //update ingredient set vol = 0;
+            pb.Value += 1;
+            cmd.CommandText = $"update ICE_CREAM set vol = {pb.Value} where ID = {id}";
+            cmd.ExecuteNonQuery();
         }
         void Run()
         {
@@ -200,7 +228,14 @@ namespace Smart_Factory_miniProject1
         void Step1() // 막대,콘,통 투입
         {
             guna2CircleProgressBar1.Value =0;
-            Oraclesearch();
+            int id = 0;
+            switch (scb.Name) {
+                case "Stick": id = 1001; break;
+                case "Cone": id = 1002; break;
+                case "Barrel": id = 1003; break;
+            }
+            useIngredient(scb, id);
+         
             guna2CircleProgressBar1.Value += 25;
             producing.Text = select2 + "를 넣고 있습니다...";
             Application.DoEvents();
@@ -209,11 +244,19 @@ namespace Smart_Factory_miniProject1
         }
         void Step2() // 원액 투입
         {
+            int id = 0;
+            switch (flavour.Name)
+            {
+                case "Choco_Soft": id = 1101; break;
+                case "Straw_Soft": id = 1102; break;
+                case "Vanilla_Soft": id = 1103; break;
+            }
+            useIngredient(flavour, id);
             producing.Text = select1 + "소프트크림을 넣고 있습니다...";
             guna2CircleProgressBar1.Value += 25;
             Application.DoEvents();
             Thread.Sleep(1000);
-            Oraclesearch();
+            //Oraclesearch();
             Step3();
         }
         void Step3() // 동결작업
@@ -222,15 +265,30 @@ namespace Smart_Factory_miniProject1
             guna2CircleProgressBar1.Value += 25;
             Application.DoEvents();
             Thread.Sleep(3000);
-            Oraclesearch();
+            //Oraclesearch();
             Step4();
         }
         void Step4() // 포장
         {
             producing.Text = product + " 포장완료";
             guna2CircleProgressBar1.Value += 25;
-            Oraclesearch();
-            //Step1(); 
+            //Oraclesearch();
+            int id = 0;
+            switch (productbar.Name)
+            {
+                case "S_Choco_Product":id=901; break;
+                case "C_Choco_Product": id = 911; break;
+                case "B_Choco_Product": id = 931; break;
+                case "S_Straw_Product": id = 902; break;
+                case "C_Straw_Product": id = 912; break;
+                case "B_Straw_Product": id = 932; break;
+                case "S_Vanilla_Product": id = 903; break;
+                case "C_Vanilla_Product": id = 913; break;
+                case "B_Vanilla_Product": id = 933; break;
+            }
+            addProduct(productbar, id);
+            if (flavour.Value > 0&& scb.Value > 0)
+                Step1(); 
         }
 
         private void guna2GroupBox2_Click(object sender, EventArgs e)
@@ -256,6 +314,24 @@ namespace Smart_Factory_miniProject1
             Oraclesearch();
         }
 
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+            GraphForm form4 = new GraphForm();
+            form4.Show();
+        }
+
+        private void metroTabPage3_Click(object sender, EventArgs e)
+        {
+            GraphForm form4 = new GraphForm();
+            form4.Show();
+        }
+
+        private void metroTabPage2_Click(object sender, EventArgs e)
+        {
+            GraphForm form4 = new GraphForm();
+            form4.Show();
+        }
+
         private void btnSelectForm_Click(object sender, EventArgs e)
         {
             
@@ -270,7 +346,7 @@ namespace Smart_Factory_miniProject1
             string[] arr = ((string)sender).Split('/');
             select1 = arr[0];
             select2 = arr[1];
-            select3 = arr[2];
+            //select3 = arr[2];
             amount = int.Parse(arr[3]);
             form3.Close();
             int i = 0, j = 0;
@@ -282,14 +358,22 @@ namespace Smart_Factory_miniProject1
             }
             switch (select2)
             {
-                case "막대": j = 0; scb = Stick;  break;
-                case "콘": j = 1; scb = Cone; break;
-                case "통": j = 2; scb = Barrel; break;
+                case "막대": j = 0; scb = Stick; select3 = "비닐";  break;
+                case "콘": j = 1; scb = Cone; select3 = "플라스틱"; break;
+                case "통": j = 2; scb = Barrel; select3 = "플라스틱"; break;
             }
             
             product = products[i, j];
             producing.Text = product+" 선택";
-            
+            if (i == 0 && j == 0) { productbar = S_Choco_Product; }
+            else if (i == 0 && j == 1) { productbar = C_Choco_Product; }
+            else if (i == 0 && j == 2) { productbar = B_Choco_Product; }
+            else if (i == 1 && j == 0) { productbar = S_Straw_Product; }
+            else if (i == 1 && j == 1) { productbar = C_Straw_Product; }
+            else if (i == 1 && j == 2) { productbar = B_Straw_Product; }
+            else if (i == 2 && j == 0) { productbar = S_Vanilla_Product; }
+            else if (i == 2 && j == 1) { productbar = C_Vanilla_Product; }
+            else if (i == 2 && j == 2) { productbar = B_Vanilla_Product; }
             //flag = false;
             //Run();
         }

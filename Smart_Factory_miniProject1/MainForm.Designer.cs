@@ -740,6 +740,7 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage1.Text = "막대";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarSize = 11;
+            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
             // metroTabPage3
             // 
@@ -761,6 +762,7 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage3.Text = "통";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.VerticalScrollbarSize = 11;
+            this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
             // 
             // metroTabPage2
             // 
@@ -782,6 +784,7 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage2.Text = "콘";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarSize = 11;
+            this.metroTabPage2.Click += new System.EventHandler(this.metroTabPage2_Click);
             // 
             // guna2GroupBox2
             // 

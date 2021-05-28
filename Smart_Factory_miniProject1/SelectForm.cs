@@ -35,8 +35,7 @@ namespace Smart_Factory_miniProject1
             if (Select_RadioButton5.Checked) selected2 = Select_RadioButton5.Text;
             if (Select_RadioButton6.Checked) selected2 = Select_RadioButton6.Text;
             if (Select_RadioButton7.Checked) selected2 = Select_RadioButton7.Text;
-            if (Select_RadioButton8.Checked) selected3 = Select_RadioButton8.Text;
-            if (Select_RadioButton9.Checked) selected3 = Select_RadioButton9.Text;
+            
             if (num != "")
             {
                 
