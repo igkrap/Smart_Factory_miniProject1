@@ -16,22 +16,22 @@ namespace Smart_Factory_miniProject1
     {
         OracleConnection conn;
         OracleCommand cmd;
-        
+
         public MainForm()
         {
             InitializeComponent();
             timer1.Start();
             string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=220.69.249.218)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=system;Password=1234;";
-            
+
             // 오라클 연결
-            conn= new OracleConnection(strConn); 
+            conn = new OracleConnection(strConn);
             conn.Open();
             // 명령 객체 생성
-            cmd=new OracleCommand();
+            cmd = new OracleCommand();
             Oraclesearch();
         }
-        
-        
+
+
         void Oraclesearch()
         {
             //생산량 현황
@@ -148,7 +148,7 @@ namespace Smart_Factory_miniProject1
                 int VOL = rdr5.GetInt32(0);
                 Cone.Value = VOL;
             }
-             
+
             cmd.CommandText = "select VOL from INGREDIENT where ID=1003";
             OracleDataReader rdr6 = cmd.ExecuteReader();
             while (rdr6.Read())
@@ -157,23 +157,15 @@ namespace Smart_Factory_miniProject1
                 Barrel.Value = VOL;
             }
         }
-        
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            
-        }
+
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             metroLabel1.Text = DateTime.Now.ToString();
         }
-
-        private void guna2ProgressBar1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
-    }
+          
+        
+    }   
 }
