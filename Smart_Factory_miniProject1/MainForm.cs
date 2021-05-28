@@ -19,6 +19,7 @@ namespace Smart_Factory_miniProject1
         OracleCommand cmd;
         SelectForm form3;
         static Thread t1;
+        bool flag = false;
         string select1 = "", select2 = "", select3 = "";
         string[,] products = { { "초코바", "초코콘", "초코통아이스크림" },
                                 { "딸기바", "딸기콘", "딸기통아이스크림" },
@@ -190,8 +191,9 @@ namespace Smart_Factory_miniProject1
             else if(scb.Value<=0){ MessageBox.Show(scb.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
             //else if (package.Value <= 0) { MessageBox.Show(package.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
             else{
-                if (t1 == null)
+                if (!flag)
                 {
+                    flag = true;
                     t1 = new Thread(new ThreadStart(Run));
                     t1.Start();
                 }
@@ -287,8 +289,10 @@ namespace Smart_Factory_miniProject1
                 case "B_Vanilla_Product": id = 933; break;
             }
             addProduct(productbar, id);
-            if (flavour.Value > 0&& scb.Value > 0)
-                Step1(); 
+            if (flavour.Value > 0 && scb.Value > 0)
+                Step1();
+            else
+                flag = false;
         }
 
         private void guna2GroupBox2_Click(object sender, EventArgs e)
