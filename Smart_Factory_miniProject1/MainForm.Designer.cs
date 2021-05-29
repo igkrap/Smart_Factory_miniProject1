@@ -65,21 +65,6 @@ namespace Smart_Factory_miniProject1
             this.cc = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.producing = new MetroFramework.Controls.MetroLabel();
-            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.Vinyl = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.Vinyl_Label = new MetroFramework.Controls.MetroLabel();
-            this.Plastic = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.Plastic_Label = new MetroFramework.Controls.MetroLabel();
-            this.vv = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.B_Straw_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.B_Vanilla_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
@@ -88,6 +73,7 @@ namespace Smart_Factory_miniProject1
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.B_Choco_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.C_Straw_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.C_Vanilla_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
@@ -96,6 +82,25 @@ namespace Smart_Factory_miniProject1
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.C_Choco_Product = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.vv = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Plastic = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Plastic_Label = new MetroFramework.Controls.MetroLabel();
+            this.Vinyl = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.Vinyl_Label = new MetroFramework.Controls.MetroLabel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.producing = new MetroFramework.Controls.MetroLabel();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Barrel.SuspendLayout();
             this.Cone.SuspendLayout();
             this.Vanilla_Soft.SuspendLayout();
@@ -107,11 +112,12 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage3.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
+            this.Plastic.SuspendLayout();
+            this.Vinyl.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
             this.guna2GroupBox3.SuspendLayout();
-            this.Vinyl.SuspendLayout();
-            this.Plastic.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -121,17 +127,22 @@ namespace Smart_Factory_miniProject1
             // guna2CircleProgressBar1
             // 
             this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.Black;
+            this.guna2CircleProgressBar1.FillThickness = 7;
             this.guna2CircleProgressBar1.Font = new System.Drawing.Font("MD개성체", 18F);
-            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.Black;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(14, 38);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar1.InnerColor = System.Drawing.Color.Black;
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(328, 56);
             this.guna2CircleProgressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.guna2CircleProgressBar1.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.Cyan;
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2CircleProgressBar1.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Triangle;
+            this.guna2CircleProgressBar1.ProgressThickness = 10;
             this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CircleProgressBar1.ShadowDecoration.Parent = this.guna2CircleProgressBar1;
             this.guna2CircleProgressBar1.ShowPercentage = true;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(120, 120);
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(150, 150);
             this.guna2CircleProgressBar1.TabIndex = 4;
             this.guna2CircleProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
@@ -629,7 +640,7 @@ namespace Smart_Factory_miniProject1
             this.cc.Location = new System.Drawing.Point(576, 24);
             this.cc.Name = "cc";
             this.cc.SelectedIndex = 2;
-            this.cc.Size = new System.Drawing.Size(273, 269);
+            this.cc.Size = new System.Drawing.Size(273, 264);
             this.cc.Style = MetroFramework.MetroColorStyle.Green;
             this.cc.TabIndex = 21;
             this.cc.UseStyleColors = true;
@@ -650,7 +661,7 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 34);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(265, 231);
+            this.metroTabPage1.Size = new System.Drawing.Size(265, 226);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "막대";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -672,240 +683,11 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.Location = new System.Drawing.Point(4, 34);
             this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(265, 231);
+            this.metroTabPage3.Size = new System.Drawing.Size(265, 226);
             this.metroTabPage3.TabIndex = 2;
             this.metroTabPage3.Text = "통";
             this.metroTabPage3.VerticalScrollbarBarColor = true;
             this.metroTabPage3.Click += new System.EventHandler(this.metroTabPage3_Click);
-            // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.metroTabPage2.Controls.Add(this.C_Straw_Product);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel5);
-            this.metroTabPage2.Controls.Add(this.C_Vanilla_Product);
-            this.metroTabPage2.Controls.Add(this.C_Total_Product);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel6);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel7);
-            this.metroTabPage2.Controls.Add(this.C_Choco_Product);
-            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel8);
-            this.metroTabPage2.CustomBackground = true;
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 34);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(265, 231);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "콘";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.Click += new System.EventHandler(this.metroTabPage2_Click);
-            // 
-            // guna2GroupBox2
-            // 
-            this.guna2GroupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.guna2GroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.guna2GroupBox2.BorderRadius = 10;
-            this.guna2GroupBox2.BorderThickness = 4;
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel13);
-            this.guna2GroupBox2.Controls.Add(this.vv);
-            this.guna2GroupBox2.Controls.Add(this.Plastic);
-            this.guna2GroupBox2.Controls.Add(this.Vinyl);
-            this.guna2GroupBox2.Controls.Add(this.Choco_Soft);
-            this.guna2GroupBox2.Controls.Add(this.Vanilla_Soft);
-            this.guna2GroupBox2.Controls.Add(this.Straw_Soft);
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel24);
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel22);
-            this.guna2GroupBox2.Controls.Add(this.Barrel);
-            this.guna2GroupBox2.Controls.Add(this.Stick);
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel25);
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel23);
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel21);
-            this.guna2GroupBox2.Controls.Add(this.Cone);
-            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel20);
-            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(210)))), ((int)(((byte)(200)))));
-            this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 40, -1, -1);
-            this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.guna2GroupBox2.Font = new System.Drawing.Font("MD개성체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(16, 24);
-            this.guna2GroupBox2.Name = "guna2GroupBox2";
-            this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(553, 269);
-            this.guna2GroupBox2.TabIndex = 22;
-            this.guna2GroupBox2.Text = "재료";
-            this.guna2GroupBox2.TextOffset = new System.Drawing.Point(20, 0);
-            this.guna2GroupBox2.Click += new System.EventHandler(this.guna2GroupBox2_Click);
-            // 
-            // producing
-            // 
-            this.producing.AutoSize = true;
-            this.producing.CustomForeColor = true;
-            this.producing.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.producing.Location = new System.Drawing.Point(288, 385);
-            this.producing.Name = "producing";
-            this.producing.Size = new System.Drawing.Size(0, 0);
-            this.producing.TabIndex = 23;
-            // 
-            // metroToolTip1
-            // 
-            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Pink;
-            this.metroToolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.metroToolTip1_Popup);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label1.Font = new System.Drawing.Font("MD개성체", 9F);
-            this.label1.Location = new System.Drawing.Point(856, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 12);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "label1";
-            // 
-            // guna2GroupBox1
-            // 
-            this.guna2GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2GroupBox1.Controls.Add(this.guna2GroupBox2);
-            this.guna2GroupBox1.Controls.Add(this.guna2GroupBox4);
-            this.guna2GroupBox1.Controls.Add(this.cc);
-            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(175, 25);
-            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(875, 615);
-            this.guna2GroupBox1.TabIndex = 25;
-            // 
-            // guna2GroupBox4
-            // 
-            this.guna2GroupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.guna2GroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.guna2GroupBox4.BorderRadius = 10;
-            this.guna2GroupBox4.BorderThickness = 4;
-            this.guna2GroupBox4.Controls.Add(this.guna2CircleProgressBar1);
-            this.guna2GroupBox4.CustomBorderColor = System.Drawing.SystemColors.InfoText;
-            this.guna2GroupBox4.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox4.Location = new System.Drawing.Point(14, 304);
-            this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GroupBox4.Name = "guna2GroupBox4";
-            this.guna2GroupBox4.ShadowDecoration.Parent = this.guna2GroupBox4;
-            this.guna2GroupBox4.Size = new System.Drawing.Size(840, 288);
-            this.guna2GroupBox4.TabIndex = 23;
-            // 
-            // guna2GroupBox3
-            // 
-            this.guna2GroupBox3.Controls.Add(this.guna2Button2);
-            this.guna2GroupBox3.Controls.Add(this.btnADDForm);
-            this.guna2GroupBox3.Controls.Add(this.guna2Button1);
-            this.guna2GroupBox3.Controls.Add(this.btnSelectForm);
-            this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(0);
-            this.guna2GroupBox3.FillColor = System.Drawing.Color.Aquamarine;
-            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox3.Location = new System.Drawing.Point(0, 0);
-            this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
-            this.guna2GroupBox3.Size = new System.Drawing.Size(175, 640);
-            this.guna2GroupBox3.TabIndex = 26;
-            // 
-            // Vinyl
-            // 
-            this.Vinyl.Animated = true;
-            this.Vinyl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.Vinyl.Controls.Add(this.Vinyl_Label);
-            this.Vinyl.FillColor = System.Drawing.Color.Black;
-            this.Vinyl.FillThickness = 12;
-            this.Vinyl.InnerColor = System.Drawing.Color.White;
-            this.Vinyl.Location = new System.Drawing.Point(431, 53);
-            this.Vinyl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Vinyl.Name = "Vinyl";
-            this.Vinyl.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Vinyl.ProgressColor2 = System.Drawing.Color.MidnightBlue;
-            this.Vinyl.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.Vinyl.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.Vinyl.ProgressThickness = 12;
-            this.Vinyl.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Vinyl.ShadowDecoration.Parent = this.Vinyl;
-            this.Vinyl.ShowPercentage = true;
-            this.Vinyl.Size = new System.Drawing.Size(88, 80);
-            this.Vinyl.TabIndex = 28;
-            this.Vinyl.Value = 50;
-            // 
-            // Vinyl_Label
-            // 
-            this.Vinyl_Label.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.Vinyl_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Vinyl_Label.Location = new System.Drawing.Point(17, 30);
-            this.Vinyl_Label.Name = "Vinyl_Label";
-            this.Vinyl_Label.Size = new System.Drawing.Size(55, 20);
-            this.Vinyl_Label.TabIndex = 27;
-            this.Vinyl_Label.Text = "0/100";
-            this.Vinyl_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Vinyl_Label.Visible = false;
-            // 
-            // Plastic
-            // 
-            this.Plastic.Animated = true;
-            this.Plastic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.Plastic.Controls.Add(this.Plastic_Label);
-            this.Plastic.FillColor = System.Drawing.Color.Black;
-            this.Plastic.FillThickness = 12;
-            this.Plastic.InnerColor = System.Drawing.Color.White;
-            this.Plastic.Location = new System.Drawing.Point(431, 153);
-            this.Plastic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Plastic.Name = "Plastic";
-            this.Plastic.ProgressColor = System.Drawing.Color.Olive;
-            this.Plastic.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Plastic.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.Plastic.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.Plastic.ProgressThickness = 12;
-            this.Plastic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Plastic.ShadowDecoration.Parent = this.Plastic;
-            this.Plastic.ShowPercentage = true;
-            this.Plastic.Size = new System.Drawing.Size(88, 80);
-            this.Plastic.TabIndex = 29;
-            this.Plastic.Value = 50;
-            // 
-            // Plastic_Label
-            // 
-            this.Plastic_Label.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.Plastic_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Plastic_Label.Location = new System.Drawing.Point(17, 30);
-            this.Plastic_Label.Name = "Plastic_Label";
-            this.Plastic_Label.Size = new System.Drawing.Size(55, 20);
-            this.Plastic_Label.TabIndex = 27;
-            this.Plastic_Label.Text = "0/100";
-            this.Plastic_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Plastic_Label.Visible = false;
-            // 
-            // vv
-            // 
-            this.vv.BackColor = System.Drawing.Color.Transparent;
-            this.vv.Font = new System.Drawing.Font("MD개성체", 10F);
-            this.vv.Location = new System.Drawing.Point(460, 134);
-            this.vv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.vv.Name = "vv";
-            this.vv.Size = new System.Drawing.Size(27, 15);
-            this.vv.TabIndex = 30;
-            this.vv.Text = "비닐";
-            // 
-            // guna2HtmlLabel13
-            // 
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("MD개성체", 10F);
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(450, 234);
-            this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(51, 15);
-            this.guna2HtmlLabel13.TabIndex = 31;
-            this.guna2HtmlLabel13.Text = "플라스틱";
             // 
             // B_Straw_Product
             // 
@@ -1025,6 +807,27 @@ namespace Smart_Factory_miniProject1
             this.guna2HtmlLabel12.TabIndex = 10;
             this.guna2HtmlLabel12.Text = "초코맛";
             // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.metroTabPage2.Controls.Add(this.C_Straw_Product);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel5);
+            this.metroTabPage2.Controls.Add(this.C_Vanilla_Product);
+            this.metroTabPage2.Controls.Add(this.C_Total_Product);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel6);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel7);
+            this.metroTabPage2.Controls.Add(this.C_Choco_Product);
+            this.metroTabPage2.Controls.Add(this.guna2HtmlLabel8);
+            this.metroTabPage2.CustomBackground = true;
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 34);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(265, 226);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "콘";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.Click += new System.EventHandler(this.metroTabPage2_Click);
+            // 
             // C_Straw_Product
             // 
             this.C_Straw_Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(150)))));
@@ -1143,13 +946,294 @@ namespace Smart_Factory_miniProject1
             this.guna2HtmlLabel8.TabIndex = 10;
             this.guna2HtmlLabel8.Text = "초코맛";
             // 
+            // guna2GroupBox2
+            // 
+            this.guna2GroupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.guna2GroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.guna2GroupBox2.BorderRadius = 10;
+            this.guna2GroupBox2.BorderThickness = 4;
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel13);
+            this.guna2GroupBox2.Controls.Add(this.vv);
+            this.guna2GroupBox2.Controls.Add(this.Plastic);
+            this.guna2GroupBox2.Controls.Add(this.Vinyl);
+            this.guna2GroupBox2.Controls.Add(this.Choco_Soft);
+            this.guna2GroupBox2.Controls.Add(this.Vanilla_Soft);
+            this.guna2GroupBox2.Controls.Add(this.Straw_Soft);
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel24);
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel22);
+            this.guna2GroupBox2.Controls.Add(this.Barrel);
+            this.guna2GroupBox2.Controls.Add(this.Stick);
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel25);
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel23);
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel21);
+            this.guna2GroupBox2.Controls.Add(this.Cone);
+            this.guna2GroupBox2.Controls.Add(this.guna2HtmlLabel20);
+            this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(210)))), ((int)(((byte)(200)))));
+            this.guna2GroupBox2.CustomBorderThickness = new System.Windows.Forms.Padding(-1, 40, -1, -1);
+            this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.guna2GroupBox2.Font = new System.Drawing.Font("MD개성체", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox2.Location = new System.Drawing.Point(16, 24);
+            this.guna2GroupBox2.Name = "guna2GroupBox2";
+            this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
+            this.guna2GroupBox2.Size = new System.Drawing.Size(553, 269);
+            this.guna2GroupBox2.TabIndex = 22;
+            this.guna2GroupBox2.Text = "재료";
+            this.guna2GroupBox2.TextOffset = new System.Drawing.Point(20, 0);
+            this.guna2GroupBox2.Click += new System.EventHandler(this.guna2GroupBox2_Click);
+            // 
+            // guna2HtmlLabel13
+            // 
+            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel13.Font = new System.Drawing.Font("MD개성체", 10F);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(450, 234);
+            this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(51, 15);
+            this.guna2HtmlLabel13.TabIndex = 31;
+            this.guna2HtmlLabel13.Text = "플라스틱";
+            // 
+            // vv
+            // 
+            this.vv.BackColor = System.Drawing.Color.Transparent;
+            this.vv.Font = new System.Drawing.Font("MD개성체", 10F);
+            this.vv.Location = new System.Drawing.Point(460, 134);
+            this.vv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.vv.Name = "vv";
+            this.vv.Size = new System.Drawing.Size(27, 15);
+            this.vv.TabIndex = 30;
+            this.vv.Text = "비닐";
+            // 
+            // Plastic
+            // 
+            this.Plastic.Animated = true;
+            this.Plastic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.Plastic.Controls.Add(this.Plastic_Label);
+            this.Plastic.FillColor = System.Drawing.Color.Black;
+            this.Plastic.FillThickness = 12;
+            this.Plastic.InnerColor = System.Drawing.Color.White;
+            this.Plastic.Location = new System.Drawing.Point(431, 153);
+            this.Plastic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Plastic.Name = "Plastic";
+            this.Plastic.ProgressColor = System.Drawing.Color.Olive;
+            this.Plastic.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Plastic.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.Plastic.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.Plastic.ProgressThickness = 12;
+            this.Plastic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Plastic.ShadowDecoration.Parent = this.Plastic;
+            this.Plastic.ShowPercentage = true;
+            this.Plastic.Size = new System.Drawing.Size(88, 80);
+            this.Plastic.TabIndex = 29;
+            this.Plastic.Value = 50;
+            // 
+            // Plastic_Label
+            // 
+            this.Plastic_Label.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.Plastic_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Plastic_Label.Location = new System.Drawing.Point(17, 30);
+            this.Plastic_Label.Name = "Plastic_Label";
+            this.Plastic_Label.Size = new System.Drawing.Size(55, 20);
+            this.Plastic_Label.TabIndex = 27;
+            this.Plastic_Label.Text = "0/100";
+            this.Plastic_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Plastic_Label.Visible = false;
+            // 
+            // Vinyl
+            // 
+            this.Vinyl.Animated = true;
+            this.Vinyl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.Vinyl.Controls.Add(this.Vinyl_Label);
+            this.Vinyl.FillColor = System.Drawing.Color.Black;
+            this.Vinyl.FillThickness = 12;
+            this.Vinyl.InnerColor = System.Drawing.Color.White;
+            this.Vinyl.Location = new System.Drawing.Point(431, 53);
+            this.Vinyl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Vinyl.Name = "Vinyl";
+            this.Vinyl.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Vinyl.ProgressColor2 = System.Drawing.Color.MidnightBlue;
+            this.Vinyl.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.Vinyl.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.Vinyl.ProgressThickness = 12;
+            this.Vinyl.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.Vinyl.ShadowDecoration.Parent = this.Vinyl;
+            this.Vinyl.ShowPercentage = true;
+            this.Vinyl.Size = new System.Drawing.Size(88, 80);
+            this.Vinyl.TabIndex = 28;
+            this.Vinyl.Value = 50;
+            // 
+            // Vinyl_Label
+            // 
+            this.Vinyl_Label.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.Vinyl_Label.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Vinyl_Label.Location = new System.Drawing.Point(17, 30);
+            this.Vinyl_Label.Name = "Vinyl_Label";
+            this.Vinyl_Label.Size = new System.Drawing.Size(55, 20);
+            this.Vinyl_Label.TabIndex = 27;
+            this.Vinyl_Label.Text = "0/100";
+            this.Vinyl_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Vinyl_Label.Visible = false;
+            // 
+            // producing
+            // 
+            this.producing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.producing.CustomBackground = true;
+            this.producing.CustomForeColor = true;
+            this.producing.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.producing.ForeColor = System.Drawing.Color.Black;
+            this.producing.Location = new System.Drawing.Point(250, 216);
+            this.producing.Name = "producing";
+            this.producing.Size = new System.Drawing.Size(300, 20);
+            this.producing.TabIndex = 23;
+            this.producing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // metroToolTip1
+            // 
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Pink;
+            this.metroToolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.metroToolTip1_Popup);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.label1.Font = new System.Drawing.Font("MD개성체", 9F);
+            this.label1.Location = new System.Drawing.Point(856, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 12);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "label1";
+            // 
+            // guna2GroupBox1
+            // 
+            this.guna2GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.guna2GroupBox1.Controls.Add(this.guna2GroupBox2);
+            this.guna2GroupBox1.Controls.Add(this.cc);
+            this.guna2GroupBox1.Controls.Add(this.guna2GroupBox4);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.guna2GroupBox1.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.Location = new System.Drawing.Point(175, 25);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
+            this.guna2GroupBox1.Size = new System.Drawing.Size(875, 615);
+            this.guna2GroupBox1.TabIndex = 25;
+            // 
+            // guna2GroupBox4
+            // 
+            this.guna2GroupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.guna2GroupBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.guna2GroupBox4.BorderRadius = 10;
+            this.guna2GroupBox4.BorderThickness = 4;
+            this.guna2GroupBox4.Controls.Add(this.pictureBox1);
+            this.guna2GroupBox4.Controls.Add(this.metroLabel1);
+            this.guna2GroupBox4.Controls.Add(this.label3);
+            this.guna2GroupBox4.Controls.Add(this.label2);
+            this.guna2GroupBox4.Controls.Add(this.guna2CircleProgressBar2);
+            this.guna2GroupBox4.Controls.Add(this.guna2CircleProgressBar1);
+            this.guna2GroupBox4.Controls.Add(this.producing);
+            this.guna2GroupBox4.CustomBorderColor = System.Drawing.SystemColors.InfoText;
+            this.guna2GroupBox4.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.guna2GroupBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox4.Location = new System.Drawing.Point(14, 304);
+            this.guna2GroupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GroupBox4.Name = "guna2GroupBox4";
+            this.guna2GroupBox4.ShadowDecoration.Parent = this.guna2GroupBox4;
+            this.guna2GroupBox4.Size = new System.Drawing.Size(840, 288);
+            this.guna2GroupBox4.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.label3.Font = new System.Drawing.Font("MD개성체", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(360, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 14);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "세부 진행률";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.label2.Font = new System.Drawing.Font("MD개성체", 10F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(112, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 14);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "전체 생산 진행률";
+            // 
+            // guna2CircleProgressBar2
+            // 
+            this.guna2CircleProgressBar2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CircleProgressBar2.FillColor = System.Drawing.Color.Black;
+            this.guna2CircleProgressBar2.FillThickness = 7;
+            this.guna2CircleProgressBar2.Font = new System.Drawing.Font("MD개성체", 18F);
+            this.guna2CircleProgressBar2.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar2.InnerColor = System.Drawing.Color.Black;
+            this.guna2CircleProgressBar2.Location = new System.Drawing.Point(96, 56);
+            this.guna2CircleProgressBar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CircleProgressBar2.Name = "guna2CircleProgressBar2";
+            this.guna2CircleProgressBar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2CircleProgressBar2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2CircleProgressBar2.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Triangle;
+            this.guna2CircleProgressBar2.ProgressThickness = 10;
+            this.guna2CircleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar2.ShadowDecoration.Parent = this.guna2CircleProgressBar2;
+            this.guna2CircleProgressBar2.ShowPercentage = true;
+            this.guna2CircleProgressBar2.Size = new System.Drawing.Size(150, 150);
+            this.guna2CircleProgressBar2.TabIndex = 5;
+            this.guna2CircleProgressBar2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
+            // guna2GroupBox3
+            // 
+            this.guna2GroupBox3.Controls.Add(this.guna2Button2);
+            this.guna2GroupBox3.Controls.Add(this.btnADDForm);
+            this.guna2GroupBox3.Controls.Add(this.guna2Button1);
+            this.guna2GroupBox3.Controls.Add(this.btnSelectForm);
+            this.guna2GroupBox3.CustomBorderThickness = new System.Windows.Forms.Padding(0);
+            this.guna2GroupBox3.FillColor = System.Drawing.Color.Aquamarine;
+            this.guna2GroupBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox3.Location = new System.Drawing.Point(0, 0);
+            this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2GroupBox3.Name = "guna2GroupBox3";
+            this.guna2GroupBox3.ShadowDecoration.Parent = this.guna2GroupBox3;
+            this.guna2GroupBox3.Size = new System.Drawing.Size(175, 640);
+            this.guna2GroupBox3.TabIndex = 26;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.metroLabel1.CustomBackground = true;
+            this.metroLabel1.Location = new System.Drawing.Point(88, 216);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(150, 20);
+            this.metroLabel1.TabIndex = 26;
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(584, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(184, 216);
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 640);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.producing);
             this.Controls.Add(this.guna2GroupBox3);
             this.Controls.Add(this.guna2GroupBox1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -1174,11 +1258,13 @@ namespace Smart_Factory_miniProject1
             this.metroTabPage2.PerformLayout();
             this.guna2GroupBox2.ResumeLayout(false);
             this.guna2GroupBox2.PerformLayout();
+            this.Plastic.ResumeLayout(false);
+            this.Vinyl.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
+            this.guna2GroupBox4.PerformLayout();
             this.guna2GroupBox3.ResumeLayout(false);
-            this.Vinyl.ResumeLayout(false);
-            this.Plastic.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1251,6 +1337,11 @@ namespace Smart_Factory_miniProject1
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ProgressBar C_Choco_Product;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

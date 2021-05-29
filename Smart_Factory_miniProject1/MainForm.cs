@@ -20,16 +20,18 @@ namespace Smart_Factory_miniProject1
         SelectForm form3;
         static Thread t1;
         bool flag = false;
+        int amount = 0,performance=0;
         string select1 = "", select2 = "", select3 = "";
         string[,] products = { { "초코바", "초코콘", "초코통아이스크림" },
                                 { "딸기바", "딸기콘", "딸기통아이스크림" },
                                 { "바닐라바", "바닐라콘", "바닐라통아이스크림" } };
+        PictureBox picture;
         Guna.UI2.WinForms.Guna2ProgressBar productbar ;
         Guna.UI2.WinForms.Guna2CircleProgressBar flavour;
         Guna.UI2.WinForms.Guna2CircleProgressBar scb;
         Guna.UI2.WinForms.Guna2CircleProgressBar package;
         string product = "";
-        int amount = 0;
+        
         public MainForm()
         {
             InitializeComponent();
@@ -198,17 +200,16 @@ namespace Smart_Factory_miniProject1
         
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (select1 != "" && select2 != "" && select3 != "") { 
-                if (!flag)
-                {
-                    flag = true;
-                    t1 = new Thread(new ThreadStart(Run));
-                    t1.Start();
-                }
-                else
-                {
-                    MessageBox.Show("이미 생산하고 있습니다");
-                }
+            
+            if (select1 != "" && select2 != "" && select3 != ""&&flavour.Value>0&&scb.Value>0&&package.Value>0&&!flag) { 
+                    
+                flag = true;
+                guna2CircleProgressBar2.Maximum = (amount > 0) ? amount : new int[]{ flavour.Value,scb.Value,package.Value}.Min();
+                metroLabel1.Text = "목표량 : " + guna2CircleProgressBar2.Maximum;
+                t1 = new Thread(new ThreadStart(Run));
+                t1.Start();
+                
+  
             }
         }
         private void useIngredient(Guna.UI2.WinForms.Guna2CircleProgressBar pb, int id)
@@ -229,7 +230,8 @@ namespace Smart_Factory_miniProject1
             cmd.CommandText = $"update ICE_CREAM set vol = {pb.Value} where ID = {id}";
             cmd.ExecuteNonQuery();
             sumProduct();
-            
+            ++performance;
+            guna2CircleProgressBar2.Value = performance;
         }
         private void sumProduct() 
         {
@@ -266,8 +268,12 @@ namespace Smart_Factory_miniProject1
             else { producing.Text = product + " 생산을 종료합니다."; 
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value = 0;
+                guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
+                metroLabel1.Text = "";
                 Application.DoEvents();
+                performance = 0;
             }
         }
         void Step2() // 원액 투입
@@ -294,8 +300,12 @@ namespace Smart_Factory_miniProject1
                 producing.Text = product + " 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value = 0;
+                guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
+                metroLabel1.Text = "";
                 Application.DoEvents();
+                performance = 0;
             }
         }
         void Step3() // 동결작업
@@ -316,8 +326,12 @@ namespace Smart_Factory_miniProject1
                 producing.Text = product + " 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value = 0;
+                guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
+                metroLabel1.Text = "";
                 Application.DoEvents();
+                performance = 0;
             }
         }
             void Step4() // 포장
@@ -353,14 +367,28 @@ namespace Smart_Factory_miniProject1
                 Step1();
             else
                 flag = false;
+                producing.Text = "재료가 소진되어 생산을 종료합니다.";
+                Application.DoEvents();
+                Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value = 0;
+                guna2CircleProgressBar2.Value = 0;
+                producing.Text = "";
+                metroLabel1.Text = "";
+                Application.DoEvents();
+
+                performance = 0;
             }
             else
             {
                 producing.Text = product + " 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value = 0;
+                guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
+                metroLabel1.Text = "";
                 Application.DoEvents();
+                performance = 0;
             }
         }
 
@@ -394,9 +422,12 @@ namespace Smart_Factory_miniProject1
 
         private void btnADDForm_Click(object sender, EventArgs e)
         {
-            AddForm form2 = new AddForm(cmd);
-            form2.ShowDialog();
-            Oraclesearch();
+            if (!flag)
+            {
+                AddForm form2 = new AddForm(cmd);
+                form2.ShowDialog();
+                Oraclesearch();
+            }
         }
 
         private void metroTabPage1_Click(object sender, EventArgs e)
@@ -437,7 +468,7 @@ namespace Smart_Factory_miniProject1
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (flag == true) { t1.Abort(); flag = false; }
+            if (flag ) { t1.Abort(); flag = false; }
             conn.Close();
         }
 
@@ -462,6 +493,11 @@ namespace Smart_Factory_miniProject1
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void B_Choco_Product_ValueChanged(object sender, EventArgs e)
         {
 
@@ -469,10 +505,12 @@ namespace Smart_Factory_miniProject1
 
         private void btnSelectForm_Click(object sender, EventArgs e)
         {
-            
+            if (!flag)
+            {
                 form3 = new SelectForm();
                 form3.FormSendEvent += new SelectForm.FormSendDataHandler(DieaseUpdateEventMethod);
                 form3.Show();
+            }
             //
 
         }
@@ -483,6 +521,8 @@ namespace Smart_Factory_miniProject1
             select2 = arr[1];
             //select3 = arr[2];
             amount = int.Parse(arr[3]);
+            
+
             form3.Close();
             int i = 0, j = 0;
             switch (select1)
