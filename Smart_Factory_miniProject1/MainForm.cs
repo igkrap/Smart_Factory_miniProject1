@@ -263,6 +263,8 @@ namespace Smart_Factory_miniProject1
                 guna2CircleProgressBar1.Value += 25;
                 producing.Text = select2 + "를 넣고 있습니다...";
                 Application.DoEvents();
+                Application.DoEvents();
+                Thread.Sleep(1500);
 
                 Step2();
             }
@@ -292,9 +294,11 @@ namespace Smart_Factory_miniProject1
             Thread.Sleep(1000);
             pictureBox1.Image = image_step2;
             producing.Text = select1 + "소프트크림을 넣고 있습니다...";
-                Thread.Sleep(1000);
+                Application.DoEvents();
+                Application.DoEvents();
+                Thread.Sleep(1500);
                 guna2CircleProgressBar1.Value += 25;
-            Application.DoEvents();
+            
             
             //Oraclesearch();
             Step3();
@@ -317,11 +321,14 @@ namespace Smart_Factory_miniProject1
         {
             if (flag == true)
             {
+                Thread.Sleep(1000);
                 pictureBox1.Image = image_step3;
                 producing.Text = select1 + "크림을 얼리고 있습니다.";
-                Thread.Sleep(1000);
-                guna2CircleProgressBar1.Value += 25;
                 Application.DoEvents();
+                Application.DoEvents();
+                Thread.Sleep(1500);
+                guna2CircleProgressBar1.Value += 25;
+                
 
                 //Oraclesearch();
                 Step4();
@@ -354,6 +361,9 @@ namespace Smart_Factory_miniProject1
                 Thread.Sleep(1000);
                 pictureBox1.Image = image_step4;
                 producing.Text = product + " 포장완료";
+                Application.DoEvents();
+                Application.DoEvents();
+                Thread.Sleep(1500);
                 guna2CircleProgressBar1.Value += 25;
             //Oraclesearch();
             
