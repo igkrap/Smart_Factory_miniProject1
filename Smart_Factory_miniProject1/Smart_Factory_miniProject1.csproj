@@ -7,9 +7,66 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="미니프로젝트_gif\1.시작\나무막대_시작.gif" />
+    <None Remove="미니프로젝트_gif\1.시작\콘_시작.gif" />
+    <None Remove="미니프로젝트_gif\1.시작\통_시작.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\딸기_나무막대_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\딸기_콘_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\딸기_통_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\바닐라_나무막대_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\바닐라_콘_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\바닐라_통_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\초코_나무막대_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\초코_콘_원액.gif" />
+    <None Remove="미니프로젝트_gif\2.원액\초코_통_원액.gif" />
+    <None Remove="미니프로젝트_gif\3.동결\나무막대_동결.gif" />
+    <None Remove="미니프로젝트_gif\3.동결\콘_동결.gif" />
+    <None Remove="미니프로젝트_gif\3.동결\통_동결.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\딸기_나무막대_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\딸기_콘_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\딸기_통_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\바닐라_나무막대_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\바닐라_콘_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\바닐라_통_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\초코_나무막대_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\초코_콘_완성.gif" />
+    <None Remove="미니프로젝트_gif\4.완성\초코_통_완성.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="미니프로젝트_gif\1.시작\나무막대_시작.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\1.시작\콘_시작.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\1.시작\통_시작.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\딸기_나무막대_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\딸기_콘_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\딸기_통_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\바닐라_나무막대_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\바닐라_콘_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\바닐라_통_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\초코_나무막대_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\초코_콘_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\2.원액\초코_통_원액.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\3.동결\나무막대_동결.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\3.동결\콘_동결.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\3.동결\통_동결.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.1.4" />
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
     <PackageReference Include="Oracle.ManagedDataAccess" Version="19.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\딸기_나무막대_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\딸기_콘_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\딸기_통_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\바닐라_나무막대_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\바닐라_콘_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\바닐라_통_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\초코_나무막대_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\초코_콘_완성.gif" />
+    <EmbeddedResource Include="미니프로젝트_gif\4.완성\초코_통_완성.gif" />
   </ItemGroup>
 
   <ItemGroup>

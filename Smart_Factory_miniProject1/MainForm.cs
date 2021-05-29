@@ -25,7 +25,7 @@ namespace Smart_Factory_miniProject1
         string[,] products = { { "초코바", "초코콘", "초코통아이스크림" },
                                 { "딸기바", "딸기콘", "딸기통아이스크림" },
                                 { "바닐라바", "바닐라콘", "바닐라통아이스크림" } };
-        PictureBox picture;
+        Image image_step1,image_step2,image_step3,image_step4;
         Guna.UI2.WinForms.Guna2ProgressBar productbar ;
         Guna.UI2.WinForms.Guna2CircleProgressBar flavour;
         Guna.UI2.WinForms.Guna2CircleProgressBar scb;
@@ -254,11 +254,12 @@ namespace Smart_Factory_miniProject1
                 switch (scb.Name)
                 {
                     case "Stick": id = 1001; break;
-                    case "Cone": id = 1002; break;
-                    case "Barrel": id = 1003; break;
+                    case "Cone": id = 1002;  break;
+                    case "Barrel": id = 1003;  break;
                 }
                 useIngredient(scb, id);
                 Thread.Sleep(1000);
+                pictureBox1.Image = image_step1;
                 guna2CircleProgressBar1.Value += 25;
                 producing.Text = select2 + "를 넣고 있습니다...";
                 Application.DoEvents();
@@ -268,6 +269,7 @@ namespace Smart_Factory_miniProject1
             else { producing.Text = product + " 생산을 종료합니다."; 
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                pictureBox1.Image = null;
                 guna2CircleProgressBar1.Value = 0;
                 guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
@@ -287,9 +289,11 @@ namespace Smart_Factory_miniProject1
                 case "Vanilla_Soft": id = 1103; break;
             }
             useIngredient(flavour, id);
-            producing.Text = select1 + "소프트크림을 넣고 있습니다...";
             Thread.Sleep(1000);
-            guna2CircleProgressBar1.Value += 25;
+            pictureBox1.Image = image_step2;
+            producing.Text = select1 + "소프트크림을 넣고 있습니다...";
+                Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value += 25;
             Application.DoEvents();
             
             //Oraclesearch();
@@ -300,6 +304,7 @@ namespace Smart_Factory_miniProject1
                 producing.Text = product + " 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                pictureBox1.Image = null;
                 guna2CircleProgressBar1.Value = 0;
                 guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
@@ -312,6 +317,7 @@ namespace Smart_Factory_miniProject1
         {
             if (flag == true)
             {
+                pictureBox1.Image = image_step3;
                 producing.Text = select1 + "크림을 얼리고 있습니다.";
                 Thread.Sleep(1000);
                 guna2CircleProgressBar1.Value += 25;
@@ -326,6 +332,7 @@ namespace Smart_Factory_miniProject1
                 producing.Text = product + " 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                pictureBox1.Image = null;
                 guna2CircleProgressBar1.Value = 0;
                 guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
@@ -345,8 +352,9 @@ namespace Smart_Factory_miniProject1
                 }
                 useIngredient(package, id);
                 Thread.Sleep(1000);
-            producing.Text = product + " 포장완료";
-            guna2CircleProgressBar1.Value += 25;
+                pictureBox1.Image = image_step4;
+                producing.Text = product + " 포장완료";
+                guna2CircleProgressBar1.Value += 25;
             //Oraclesearch();
             
             switch (productbar.Name)
@@ -370,6 +378,7 @@ namespace Smart_Factory_miniProject1
                 producing.Text = "재료가 소진되어 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                pictureBox1.Image = null;
                 guna2CircleProgressBar1.Value = 0;
                 guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
@@ -383,6 +392,7 @@ namespace Smart_Factory_miniProject1
                 producing.Text = product + " 생산을 종료합니다.";
                 Application.DoEvents();
                 Thread.Sleep(1000);
+                pictureBox1.Image = null;
                 guna2CircleProgressBar1.Value = 0;
                 guna2CircleProgressBar2.Value = 0;
                 producing.Text = "";
@@ -527,7 +537,7 @@ namespace Smart_Factory_miniProject1
             int i = 0, j = 0;
             switch (select1)
             {
-                case "초코": i = 0; flavour = Choco_Soft; break;
+                case "초코": i = 0; flavour = Choco_Soft;  break;
                 case "딸기": i = 1; flavour = Straw_Soft; break;
                 case "바닐라": i = 2; flavour = Vanilla_Soft; break;
             }
@@ -540,15 +550,33 @@ namespace Smart_Factory_miniProject1
             
             product = products[i, j];
             producing.Text = product+" 선택";
-            if (i == 0 && j == 0) { productbar = S_Choco_Product; }
-            else if (i == 0 && j == 1) { productbar = C_Choco_Product; }
-            else if (i == 0 && j == 2) { productbar = B_Choco_Product; }
-            else if (i == 1 && j == 0) { productbar = S_Straw_Product; }
-            else if (i == 1 && j == 1) { productbar = C_Straw_Product; }
-            else if (i == 1 && j == 2) { productbar = B_Straw_Product; }
-            else if (i == 2 && j == 0) { productbar = S_Vanilla_Product; }
-            else if (i == 2 && j == 1) { productbar = C_Vanilla_Product; }
-            else if (i == 2 && j == 2) { productbar = B_Vanilla_Product; }
+            if (i == 0 && j == 0) { productbar = S_Choco_Product; image_step1 = Properties.Resources.나무막대_시작; 
+                image_step2 = Properties.Resources.초코_나무막대_원액; image_step3 = Properties.Resources.나무막대_동결; image_step4 = Properties.Resources.초코_나무막대_완성;
+            }
+            else if (i == 0 && j == 1) { productbar = C_Choco_Product; image_step1 = Properties.Resources.콘_시작;
+                image_step2 = Properties.Resources.초코_콘_원액; image_step3 = Properties.Resources.콘_동결; image_step4 = Properties.Resources.초코_콘_완성;
+            }
+            else if (i == 0 && j == 2) { productbar = B_Choco_Product; image_step1 = Properties.Resources.통_시작;
+                image_step2 = Properties.Resources.초코_통_원액; image_step3 = Properties.Resources.통_동결; image_step4 = Properties.Resources.초코_통_완성;
+            }
+            else if (i == 1 && j == 0) { productbar = S_Straw_Product; image_step1 = Properties.Resources.나무막대_시작;
+                image_step2 = Properties.Resources.딸기_나무막대_원액; image_step3 = Properties.Resources.나무막대_동결; image_step4 = Properties.Resources.딸기_나무막대_완성;
+            }
+            else if (i == 1 && j == 1) { productbar = C_Straw_Product; image_step1 = Properties.Resources.콘_시작;
+                image_step2 = Properties.Resources.딸기_콘_원액; image_step3 = Properties.Resources.콘_동결; image_step4 = Properties.Resources.딸기_콘_완성;
+            }
+            else if (i == 1 && j == 2) { productbar = B_Straw_Product; image_step1 = Properties.Resources.통_시작;
+                image_step2 = Properties.Resources.딸기_통_원액; image_step3 = Properties.Resources.통_동결; image_step4 = Properties.Resources.딸기_통_완성;
+            }
+            else if (i == 2 && j == 0) { productbar = S_Vanilla_Product; image_step1 = Properties.Resources.나무막대_시작;
+                image_step2 = Properties.Resources.바닐라_나무막대_원액; image_step3 = Properties.Resources.나무막대_동결; image_step4 = Properties.Resources.바닐라_나무막대_완성;
+            }
+            else if (i == 2 && j == 1) { productbar = C_Vanilla_Product; image_step1 = Properties.Resources.콘_시작;
+                image_step2 = Properties.Resources.바닐라_콘_원액; image_step3 = Properties.Resources.콘_동결; image_step4 = Properties.Resources.바닐라_콘_완성;
+            }
+            else if (i == 2 && j == 2) { productbar = B_Vanilla_Product; image_step1 = Properties.Resources.통_시작;
+                image_step2 = Properties.Resources.바닐라_통_원액; image_step3 = Properties.Resources.통_동결; image_step4 = Properties.Resources.바닐라_통_완성;
+            }
             //flag = false;
             //Run();
         }

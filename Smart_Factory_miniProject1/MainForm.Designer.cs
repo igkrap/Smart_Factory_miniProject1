@@ -1222,9 +1222,10 @@ namespace Smart_Factory_miniProject1
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.pictureBox1.Location = new System.Drawing.Point(584, 40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 216);
+            this.pictureBox1.Size = new System.Drawing.Size(136, 216);
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
