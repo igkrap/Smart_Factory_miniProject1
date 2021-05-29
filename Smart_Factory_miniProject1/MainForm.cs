@@ -170,6 +170,21 @@ namespace Smart_Factory_miniProject1
                 int VOL = rdr6.GetInt32(0);
                 Barrel.Value = VOL;
             }
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1201";
+            OracleDataReader rdr7 = cmd.ExecuteReader();
+            while (rdr7.Read())
+            {
+                int VOL = rdr7.GetInt32(0);
+                Vinyl.Value = VOL;
+            }
+            cmd.CommandText = "select VOL from INGREDIENT where ID=1202";
+            OracleDataReader rdr8 = cmd.ExecuteReader();
+            while (rdr8.Read())
+            {
+                int VOL = rdr8.GetInt32(0);
+                Plastic.Value = VOL;
+            }
+            sumProduct();
         }
 
 
@@ -183,12 +198,7 @@ namespace Smart_Factory_miniProject1
         
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
-            if (select1 == "" && select2 == "" && select3 == "") { MessageBox.Show("재료가 선택되지 않았습니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
-            else if (flavour.Value <= 0)  { MessageBox.Show(flavour.Name+"(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
-            else if(scb.Value<=0){ MessageBox.Show(scb.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
-            //else if (package.Value <= 0) { MessageBox.Show(package.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
-            else{
+            if (select1 != "" && select2 != "" && select3 != "") { 
                 if (!flag)
                 {
                     flag = true;
@@ -218,6 +228,14 @@ namespace Smart_Factory_miniProject1
             pb.Value += 1;
             cmd.CommandText = $"update ICE_CREAM set vol = {pb.Value} where ID = {id}";
             cmd.ExecuteNonQuery();
+            sumProduct();
+            
+        }
+        private void sumProduct() 
+        {
+            S_Total_Product.Value = S_Choco_Product.Value + S_Straw_Product.Value + S_Vanilla_Product.Value;
+            C_Total_Product.Value = C_Choco_Product.Value + C_Straw_Product.Value + C_Vanilla_Product.Value;
+            B_Total_Product.Value = B_Choco_Product.Value + B_Straw_Product.Value + B_Vanilla_Product.Value;
         }
         void Run()
         {
@@ -304,12 +322,19 @@ namespace Smart_Factory_miniProject1
         }
             void Step4() // 포장
         {
-            if (flag == true) { 
-            Thread.Sleep(1000);
+            if (flag == true) {
+                int id = 0;
+                switch (package.Name)
+                {
+                    case "Vinyl": id = 1201; break;
+                    case "Plastic": id = 1202; break;
+                }
+                useIngredient(package, id);
+                Thread.Sleep(1000);
             producing.Text = product + " 포장완료";
             guna2CircleProgressBar1.Value += 25;
             //Oraclesearch();
-            int id = 0;
+            
             switch (productbar.Name)
             {
                 case "S_Choco_Product":id=901; break;
@@ -324,7 +349,7 @@ namespace Smart_Factory_miniProject1
             }
             addProduct(productbar, id);
             Thread.Sleep(1000);
-            if (flavour.Value > 0 && scb.Value > 0)
+            if (flavour.Value > 0 && scb.Value > 0&&package.Value>0)
                 Step1();
             else
                 flag = false;
@@ -347,12 +372,24 @@ namespace Smart_Factory_miniProject1
             Stick_Label.Text = Stick.Value.ToString() + "/" + Stick.Maximum.ToString();
             Cone_Label.Text = Cone.Value.ToString() + "/" + Cone.Maximum.ToString();
             Barrel_Label.Text = Barrel.Value.ToString() + "/" + Barrel.Maximum.ToString();
+            Vinyl_Label.Text = Vinyl.Value.ToString() + "/" + Vinyl.Maximum.ToString();
+            Plastic_Label.Text = Plastic.Value.ToString() + "/" + Plastic.Maximum.ToString();
+            Choco_Soft.ShowPercentage = !Choco_Soft.ShowPercentage;
+            Straw_Soft.ShowPercentage = !Straw_Soft.ShowPercentage;
+            Vanilla_Soft.ShowPercentage = !Vanilla_Soft.ShowPercentage;
+            Stick.ShowPercentage = !Stick.ShowPercentage;
+            Cone.ShowPercentage = !Cone.ShowPercentage;
+            Barrel.ShowPercentage = !Barrel.ShowPercentage;
+            Vinyl.ShowPercentage = !Vinyl.ShowPercentage;
+            Plastic.ShowPercentage = !Plastic.ShowPercentage;
             Choco_Label.Visible = !Choco_Label.Visible;
             Straw_Label.Visible = !Straw_Label.Visible;
             Vanilla_Label.Visible = !Vanilla_Label.Visible;
             Stick_Label.Visible = !Stick_Label.Visible;
             Cone_Label.Visible = !Cone_Label.Visible;
             Barrel_Label.Visible = !Barrel_Label.Visible;
+            Vinyl_Label.Visible = !Vinyl_Label.Visible;
+            Plastic_Label.Visible = !Plastic_Label.Visible;
         }
 
         private void btnADDForm_Click(object sender, EventArgs e)
@@ -387,14 +424,15 @@ namespace Smart_Factory_miniProject1
 
         private void guna2Button1_MouseHover(object sender, EventArgs e)
         {
-            if (select1 == "" && select2 == "" && select3 == "") { metroToolTip1.SetToolTip(guna2Button1, "재료가 선택되지 않았습니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
-            else if (flavour.Value <= 0) { metroToolTip1.SetToolTip(guna2Button1, flavour.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
-            else if (scb.Value <= 0) { metroToolTip1.SetToolTip(guna2Button1, scb.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
-            //else if (package.Value <= 0) { MessageBox.Show(package.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
-            else if (flag){metroToolTip1.SetToolTip(guna2Button1, "이미 생산하고 있습니다");}
-            else metroToolTip1.IsBalloon = false;
-            metroToolTip1.IsBalloon = true;
             
+            if (select1 == "" && select2 == "" && select3 == "") { metroToolTip1.SetToolTip(guna2Button1, "재료가 선택되지 않았습니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
+            else if (flavour.Value <= 0) {  metroToolTip1.SetToolTip(guna2Button1, flavour.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            else if (scb.Value <= 0) {  metroToolTip1.SetToolTip(guna2Button1, scb.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            else if (package.Value <= 0) {  metroToolTip1.SetToolTip(guna2Button1, package.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            else if (flag){  metroToolTip1.SetToolTip(guna2Button1, "이미 생산하고 있습니다");}
+            else metroToolTip1.SetToolTip(guna2Button1, "생산 가능합니다.");
+
+
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -405,9 +443,28 @@ namespace Smart_Factory_miniProject1
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-        
-            producing.Text = product + " 생산을 종료합니다.";
-            flag = false;
+            if (flag)
+            {
+                producing.Text = product + " 생산을 종료합니다.";
+                flag = false;
+            }
+            
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void S_Vanilla_Product_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_Choco_Product_ValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSelectForm_Click(object sender, EventArgs e)
@@ -436,9 +493,9 @@ namespace Smart_Factory_miniProject1
             }
             switch (select2)
             {
-                case "막대": j = 0; scb = Stick; select3 = "비닐";  break;
-                case "콘": j = 1; scb = Cone; select3 = "플라스틱"; break;
-                case "통": j = 2; scb = Barrel; select3 = "플라스틱"; break;
+                case "막대": j = 0; scb = Stick; select3 = "비닐";package = Vinyl;  break;
+                case "콘": j = 1; scb = Cone; select3 = "플라스틱"; package = Plastic; break;
+                case "통": j = 2; scb = Barrel; select3 = "플라스틱"; package = Plastic; break;
             }
             
             product = products[i, j];
