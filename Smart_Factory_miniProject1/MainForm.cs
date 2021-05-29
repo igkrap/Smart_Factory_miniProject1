@@ -33,8 +33,9 @@ namespace Smart_Factory_miniProject1
         public MainForm()
         {
             InitializeComponent();
+            this.BackColor= Color.FromArgb(15, 20, 42);
             timer1.Start();
-            string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=220.69.249.218)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=system;Password=1234;";
+            string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=211.114.29.160)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=system;Password=1234;";
 
             // 오라클 연결
             conn = new OracleConnection(strConn);
@@ -176,13 +177,10 @@ namespace Smart_Factory_miniProject1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            metroLabel1.Text = DateTime.Now.ToString();
+            label1.Text = DateTime.Now.ToString();
         }
 
-        private void metroLabel1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(select1 + " " + select2 + " " + select3);
-        }
+        
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             
@@ -229,23 +227,34 @@ namespace Smart_Factory_miniProject1
         }
         void Step1() // 막대,콘,통 투입
         {
-            guna2CircleProgressBar1.Value =0;
-            int id = 0;
-            switch (scb.Name) {
-                case "Stick": id = 1001; break;
-                case "Cone": id = 1002; break;
-                case "Barrel": id = 1003; break;
+            if (flag == true)
+            {
+                guna2CircleProgressBar1.Value = 0;
+                int id = 0;
+                switch (scb.Name)
+                {
+                    case "Stick": id = 1001; break;
+                    case "Cone": id = 1002; break;
+                    case "Barrel": id = 1003; break;
+                }
+                useIngredient(scb, id);
+                Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value += 25;
+                producing.Text = select2 + "를 넣고 있습니다...";
+                Application.DoEvents();
+
+                Step2();
             }
-            useIngredient(scb, id);
-         
-            guna2CircleProgressBar1.Value += 25;
-            producing.Text = select2 + "를 넣고 있습니다...";
-            Application.DoEvents();
-            Thread.Sleep(1000);
-            Step2();
+            else { producing.Text = product + " 생산을 종료합니다."; 
+                Application.DoEvents();
+                Thread.Sleep(1000);
+                producing.Text = "";
+                Application.DoEvents();
+            }
         }
         void Step2() // 원액 투입
         {
+            if(flag==true){ 
             int id = 0;
             switch (flavour.Name)
             {
@@ -255,23 +264,48 @@ namespace Smart_Factory_miniProject1
             }
             useIngredient(flavour, id);
             producing.Text = select1 + "소프트크림을 넣고 있습니다...";
+            Thread.Sleep(1000);
             guna2CircleProgressBar1.Value += 25;
             Application.DoEvents();
-            Thread.Sleep(1000);
+            
             //Oraclesearch();
             Step3();
         }
+            else
+            {
+                producing.Text = product + " 생산을 종료합니다.";
+                Application.DoEvents();
+                Thread.Sleep(1000);
+                producing.Text = "";
+                Application.DoEvents();
+            }
+        }
         void Step3() // 동결작업
         {
-            producing.Text = select1 + "크림을 얼리고 있습니다.";
-            guna2CircleProgressBar1.Value += 25;
-            Application.DoEvents();
-            Thread.Sleep(3000);
-            //Oraclesearch();
-            Step4();
+            if (flag == true)
+            {
+                producing.Text = select1 + "크림을 얼리고 있습니다.";
+                Thread.Sleep(1000);
+                guna2CircleProgressBar1.Value += 25;
+                Application.DoEvents();
+
+                //Oraclesearch();
+                Step4();
+            }
+
+            else
+            {
+                producing.Text = product + " 생산을 종료합니다.";
+                Application.DoEvents();
+                Thread.Sleep(1000);
+                producing.Text = "";
+                Application.DoEvents();
+            }
         }
-        void Step4() // 포장
+            void Step4() // 포장
         {
+            if (flag == true) { 
+            Thread.Sleep(1000);
             producing.Text = product + " 포장완료";
             guna2CircleProgressBar1.Value += 25;
             //Oraclesearch();
@@ -289,10 +323,20 @@ namespace Smart_Factory_miniProject1
                 case "B_Vanilla_Product": id = 933; break;
             }
             addProduct(productbar, id);
+            Thread.Sleep(1000);
             if (flavour.Value > 0 && scb.Value > 0)
                 Step1();
             else
                 flag = false;
+            }
+            else
+            {
+                producing.Text = product + " 생산을 종료합니다.";
+                Application.DoEvents();
+                Thread.Sleep(1000);
+                producing.Text = "";
+                Application.DoEvents();
+            }
         }
 
         private void guna2GroupBox2_Click(object sender, EventArgs e)
@@ -313,7 +357,7 @@ namespace Smart_Factory_miniProject1
 
         private void btnADDForm_Click(object sender, EventArgs e)
         {
-            AddForm form2 = new AddForm();
+            AddForm form2 = new AddForm(cmd);
             form2.ShowDialog();
             Oraclesearch();
         }
@@ -334,6 +378,36 @@ namespace Smart_Factory_miniProject1
         {
             GraphForm form4 = new GraphForm();
             form4.Show();
+        }
+
+        private void metroToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_MouseHover(object sender, EventArgs e)
+        {
+            if (select1 == "" && select2 == "" && select3 == "") { metroToolTip1.SetToolTip(guna2Button1, "재료가 선택되지 않았습니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
+            else if (flavour.Value <= 0) { metroToolTip1.SetToolTip(guna2Button1, flavour.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            else if (scb.Value <= 0) { metroToolTip1.SetToolTip(guna2Button1, scb.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            //else if (package.Value <= 0) { MessageBox.Show(package.Name + "(이)가 부족합니다. 재료 추가 버튼을 눌러 재료를 추가해주세요."); }
+            else if (flag){metroToolTip1.SetToolTip(guna2Button1, "이미 생산하고 있습니다");}
+            else metroToolTip1.IsBalloon = false;
+            metroToolTip1.IsBalloon = true;
+            
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (flag == true) { t1.Abort(); flag = false; }
+            conn.Close();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+        
+            producing.Text = product + " 생산을 종료합니다.";
+            flag = false;
         }
 
         private void btnSelectForm_Click(object sender, EventArgs e)
