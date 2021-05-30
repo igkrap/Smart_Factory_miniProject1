@@ -258,11 +258,11 @@ namespace Smart_Factory_miniProject1
                     case "Barrel": id = 1003;  break;
                 }
                 useIngredient(scb, id);
-                //Thread.Sleep(1000);
+          
                 pictureBox1.Image = image_step1;
                 producing.Text = select2 + "를 넣고 있습니다...";
                 Application.DoEvents();
-                Application.DoEvents();
+                
                 for (int i = 0; i < 25; i++)
                 {
                     guna2CircleProgressBar1.Value += 1;
@@ -274,9 +274,7 @@ namespace Smart_Factory_miniProject1
 
                 Step2();
             }
-            else {
-                productStop();
-            }
+          
         }
         void Step2() // 원액 투입
         {
@@ -289,11 +287,11 @@ namespace Smart_Factory_miniProject1
                 case "Vanilla_Soft": id = 1103; break;
             }
             useIngredient(flavour, id);
-            //Thread.Sleep(1000);
+            
             pictureBox1.Image = image_step2;
             producing.Text = select1 + "소프트크림을 넣고 있습니다...";
                 Application.DoEvents();
-                Application.DoEvents();
+                
                 for (int i = 0; i < 25; i++)
                 {
                     guna2CircleProgressBar1.Value += 1;
@@ -306,20 +304,17 @@ namespace Smart_Factory_miniProject1
                 //Oraclesearch();
                 Step3();
         }
-            else
-            {
-                productStop();
-            }
+            
         }
         void Step3() // 동결작업
         {
             if (flag == true)
             {
-                //Thread.Sleep(1000);
+                
                 pictureBox1.Image = image_step3;
                 producing.Text = select1 + "크림을 얼리고 있습니다.";
                 Application.DoEvents();
-                Application.DoEvents();
+                
                 for (int i = 0; i < 25; i++)
                 {
                     guna2CircleProgressBar1.Value += 1;
@@ -332,10 +327,7 @@ namespace Smart_Factory_miniProject1
                 Step4();
             }
 
-            else
-            {
-                productStop();
-            }
+        
         }
             void Step4() // 포장
         {
@@ -347,10 +339,10 @@ namespace Smart_Factory_miniProject1
                     case "Plastic": id = 1202; break;
                 }
                 useIngredient(package, id);
-                //Thread.Sleep(1000);
+                
                 pictureBox1.Image = image_step4;
                 producing.Text = product + " 포장완료";
-                Application.DoEvents();
+                
                 Application.DoEvents();
                 for (int i = 0; i < 25; i++)
                 {
@@ -373,22 +365,29 @@ namespace Smart_Factory_miniProject1
                 case "B_Vanilla_Product": id = 933; break;
             }
             addProduct(productbar, id);
-            Thread.Sleep(1000);
-                if (flavour.Value > 0 && scb.Value > 0 && package.Value > 0)
+
+                if (flavour.Value > 0 && scb.Value > 0 && package.Value > 0 && guna2CircleProgressBar2.Value < guna2CircleProgressBar2.Maximum)
                     Step1();
                 else
-                    productStop();
+                {
+                    flag = false;
+                    pictureBox1.Image = null;
+                    guna2CircleProgressBar1.Value = 0;
+                    guna2CircleProgressBar2.Value = 0;
+                    producing.Text = "";
+                    metroLabel1.Text = "";
+                    Application.DoEvents();
+                    performance = 0;
+                }
             }
-            else
-            {
-                productStop();
-            }
+           
         }
         void productStop() {
+            t1.Abort();
             flag = false;
             producing.Text = product + " 생산을 종료합니다.";
             Application.DoEvents();
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             pictureBox1.Image = null;
             guna2CircleProgressBar1.Value = 0;
             guna2CircleProgressBar2.Value = 0;
@@ -396,6 +395,7 @@ namespace Smart_Factory_miniProject1
             metroLabel1.Text = "";
             Application.DoEvents();
             performance = 0;
+            
         }
         private void guna2GroupBox2_Click(object sender, EventArgs e)
         {
@@ -482,7 +482,8 @@ namespace Smart_Factory_miniProject1
             if (flag)
             {
                 producing.Text = product + " 생산을 종료합니다.";
-                flag = false;
+                productStop();
+                
             }
             
 
