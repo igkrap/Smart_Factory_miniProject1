@@ -95,12 +95,12 @@ namespace Smart_Factory_miniProject1
             this.label1 = new System.Windows.Forms.Label();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Barrel.SuspendLayout();
             this.Cone.SuspendLayout();
             this.Vanilla_Soft.SuspendLayout();
@@ -116,8 +116,8 @@ namespace Smart_Factory_miniProject1
             this.Vinyl.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.guna2GroupBox4.SuspendLayout();
-            this.guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GroupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -155,6 +155,7 @@ namespace Smart_Factory_miniProject1
             this.S_Straw_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.S_Straw_Product.Location = new System.Drawing.Point(90, 180);
             this.S_Straw_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.S_Straw_Product.Maximum = 300;
             this.S_Straw_Product.Name = "S_Straw_Product";
             this.S_Straw_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.S_Straw_Product.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -185,6 +186,7 @@ namespace Smart_Factory_miniProject1
             this.S_Vanilla_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.S_Vanilla_Product.Location = new System.Drawing.Point(90, 140);
             this.S_Vanilla_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.S_Vanilla_Product.Maximum = 300;
             this.S_Vanilla_Product.Name = "S_Vanilla_Product";
             this.S_Vanilla_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.S_Vanilla_Product.ProgressColor = System.Drawing.Color.LemonChiffon;
@@ -217,6 +219,7 @@ namespace Smart_Factory_miniProject1
             this.S_Choco_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.S_Choco_Product.Location = new System.Drawing.Point(90, 100);
             this.S_Choco_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.S_Choco_Product.Maximum = 300;
             this.S_Choco_Product.Name = "S_Choco_Product";
             this.S_Choco_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.S_Choco_Product.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -247,6 +250,7 @@ namespace Smart_Factory_miniProject1
             this.S_Total_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.S_Total_Product.Location = new System.Drawing.Point(90, 28);
             this.S_Total_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.S_Total_Product.Maximum = 300;
             this.S_Total_Product.Name = "S_Total_Product";
             this.S_Total_Product.ShadowDecoration.Parent = this.S_Total_Product;
             this.S_Total_Product.ShowPercentage = true;
@@ -477,7 +481,7 @@ namespace Smart_Factory_miniProject1
             this.Vanilla_Soft.ShowPercentage = true;
             this.Vanilla_Soft.Size = new System.Drawing.Size(88, 80);
             this.Vanilla_Soft.TabIndex = 17;
-            this.Vanilla_Soft.Value = 50;
+            this.Vanilla_Soft.Value = 100;
             // 
             // Vanilla_Label
             // 
@@ -498,7 +502,6 @@ namespace Smart_Factory_miniProject1
             this.Straw_Soft.Animated = true;
             this.Straw_Soft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.Straw_Soft.Controls.Add(this.Straw_Label);
-            this.Straw_Soft.EnsureVisible = true;
             this.Straw_Soft.FillColor = System.Drawing.Color.Black;
             this.Straw_Soft.FillThickness = 12;
             this.Straw_Soft.ForeColor = System.Drawing.Color.Black;
@@ -516,7 +519,7 @@ namespace Smart_Factory_miniProject1
             this.Straw_Soft.ShowPercentage = true;
             this.Straw_Soft.Size = new System.Drawing.Size(88, 80);
             this.Straw_Soft.TabIndex = 17;
-            this.Straw_Soft.Value = 50;
+            this.Straw_Soft.Value = 100;
             // 
             // Straw_Label
             // 
@@ -594,7 +597,6 @@ namespace Smart_Factory_miniProject1
             this.Choco_Soft.Animated = true;
             this.Choco_Soft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.Choco_Soft.Controls.Add(this.Choco_Label);
-            this.Choco_Soft.EnsureVisible = true;
             this.Choco_Soft.FillColor = System.Drawing.Color.Black;
             this.Choco_Soft.FillThickness = 12;
             this.Choco_Soft.Font = new System.Drawing.Font("MD개성체", 18F);
@@ -639,7 +641,7 @@ namespace Smart_Factory_miniProject1
             this.cc.ItemSize = new System.Drawing.Size(100, 30);
             this.cc.Location = new System.Drawing.Point(576, 24);
             this.cc.Name = "cc";
-            this.cc.SelectedIndex = 2;
+            this.cc.SelectedIndex = 0;
             this.cc.Size = new System.Drawing.Size(273, 264);
             this.cc.Style = MetroFramework.MetroColorStyle.Green;
             this.cc.TabIndex = 21;
@@ -698,6 +700,7 @@ namespace Smart_Factory_miniProject1
             this.B_Straw_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.B_Straw_Product.Location = new System.Drawing.Point(90, 180);
             this.B_Straw_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.B_Straw_Product.Maximum = 300;
             this.B_Straw_Product.Name = "B_Straw_Product";
             this.B_Straw_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.B_Straw_Product.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -728,6 +731,7 @@ namespace Smart_Factory_miniProject1
             this.B_Vanilla_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.B_Vanilla_Product.Location = new System.Drawing.Point(90, 140);
             this.B_Vanilla_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.B_Vanilla_Product.Maximum = 300;
             this.B_Vanilla_Product.Name = "B_Vanilla_Product";
             this.B_Vanilla_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.B_Vanilla_Product.ProgressColor = System.Drawing.Color.LemonChiffon;
@@ -746,6 +750,7 @@ namespace Smart_Factory_miniProject1
             this.B_Total_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.B_Total_Product.Location = new System.Drawing.Point(90, 28);
             this.B_Total_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.B_Total_Product.Maximum = 300;
             this.B_Total_Product.Name = "B_Total_Product";
             this.B_Total_Product.ShadowDecoration.Parent = this.B_Total_Product;
             this.B_Total_Product.ShowPercentage = true;
@@ -786,6 +791,7 @@ namespace Smart_Factory_miniProject1
             this.B_Choco_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.B_Choco_Product.Location = new System.Drawing.Point(90, 100);
             this.B_Choco_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.B_Choco_Product.Maximum = 300;
             this.B_Choco_Product.Name = "B_Choco_Product";
             this.B_Choco_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.B_Choco_Product.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -837,6 +843,7 @@ namespace Smart_Factory_miniProject1
             this.C_Straw_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.C_Straw_Product.Location = new System.Drawing.Point(90, 180);
             this.C_Straw_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.C_Straw_Product.Maximum = 300;
             this.C_Straw_Product.Name = "C_Straw_Product";
             this.C_Straw_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.C_Straw_Product.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -867,6 +874,7 @@ namespace Smart_Factory_miniProject1
             this.C_Vanilla_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.C_Vanilla_Product.Location = new System.Drawing.Point(90, 140);
             this.C_Vanilla_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.C_Vanilla_Product.Maximum = 300;
             this.C_Vanilla_Product.Name = "C_Vanilla_Product";
             this.C_Vanilla_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.C_Vanilla_Product.ProgressColor = System.Drawing.Color.LemonChiffon;
@@ -885,6 +893,7 @@ namespace Smart_Factory_miniProject1
             this.C_Total_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.C_Total_Product.Location = new System.Drawing.Point(90, 28);
             this.C_Total_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.C_Total_Product.Maximum = 300;
             this.C_Total_Product.Name = "C_Total_Product";
             this.C_Total_Product.ShadowDecoration.Parent = this.C_Total_Product;
             this.C_Total_Product.ShowPercentage = true;
@@ -925,6 +934,7 @@ namespace Smart_Factory_miniProject1
             this.C_Choco_Product.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.C_Choco_Product.Location = new System.Drawing.Point(90, 100);
             this.C_Choco_Product.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.C_Choco_Product.Maximum = 300;
             this.C_Choco_Product.Name = "C_Choco_Product";
             this.C_Choco_Product.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid;
             this.C_Choco_Product.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -1146,6 +1156,25 @@ namespace Smart_Factory_miniProject1
             this.guna2GroupBox4.Size = new System.Drawing.Size(840, 288);
             this.guna2GroupBox4.TabIndex = 23;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pictureBox1.Location = new System.Drawing.Point(584, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 216);
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.metroLabel1.CustomBackground = true;
+            this.metroLabel1.Location = new System.Drawing.Point(88, 216);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(150, 20);
+            this.metroLabel1.TabIndex = 26;
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1210,25 +1239,6 @@ namespace Smart_Factory_miniProject1
             this.guna2GroupBox3.Size = new System.Drawing.Size(175, 640);
             this.guna2GroupBox3.TabIndex = 26;
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.metroLabel1.CustomBackground = true;
-            this.metroLabel1.Location = new System.Drawing.Point(88, 216);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(150, 20);
-            this.metroLabel1.TabIndex = 26;
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.pictureBox1.Location = new System.Drawing.Point(584, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(136, 216);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1264,8 +1274,8 @@ namespace Smart_Factory_miniProject1
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox4.ResumeLayout(false);
             this.guna2GroupBox4.PerformLayout();
-            this.guna2GroupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GroupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

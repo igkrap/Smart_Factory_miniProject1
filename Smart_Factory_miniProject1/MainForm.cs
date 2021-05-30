@@ -432,24 +432,53 @@ namespace Smart_Factory_miniProject1
                 AddForm form2 = new AddForm(cmd);
                 form2.ShowDialog();
                 Oraclesearch();
+                Choco_Label.Text = Choco_Soft.Value.ToString() + "/" + Choco_Soft.Maximum.ToString();
+                Straw_Label.Text = Straw_Soft.Value.ToString() + "/" + Straw_Soft.Maximum.ToString();
+                Vanilla_Label.Text = Vanilla_Soft.Value.ToString() + "/" + Vanilla_Soft.Maximum.ToString();
+                Stick_Label.Text = Stick.Value.ToString() + "/" + Stick.Maximum.ToString();
+                Cone_Label.Text = Cone.Value.ToString() + "/" + Cone.Maximum.ToString();
+                Barrel_Label.Text = Barrel.Value.ToString() + "/" + Barrel.Maximum.ToString();
+                Vinyl_Label.Text = Vinyl.Value.ToString() + "/" + Vinyl.Maximum.ToString();
+                Plastic_Label.Text = Plastic.Value.ToString() + "/" + Plastic.Maximum.ToString();
             }
         }
 
         private void metroTabPage1_Click(object sender, EventArgs e)
         {
-            GraphForm form4 = new GraphForm();
+            GraphForm form4 = new GraphForm(new string[] { "초코바",
+                "딸기바", "바닐라바",
+                "초코콘", "딸기콘", "바닐라콘",
+                "초코통아이스크림", "딸기통아이스크림", "바닐라통아이스크림"
+            }, new int[] { S_Choco_Product.Value, 
+                S_Straw_Product.Value, S_Vanilla_Product.Value,
+                C_Choco_Product.Value, C_Straw_Product.Value, C_Vanilla_Product.Value,
+                B_Choco_Product.Value, B_Straw_Product.Value, B_Vanilla_Product.Value });
             form4.Show();
         }
 
         private void metroTabPage3_Click(object sender, EventArgs e)
         {
-            GraphForm form4 = new GraphForm();
+            GraphForm form4 = new GraphForm(new string[] { "초코바",
+                "딸기바", "바닐라바",
+                "초코콘", "딸기콘", "바닐라콘",
+                "초코통아이스크림", "딸기통아이스크림", "바닐라통아이스크림"
+            }, new int[] { S_Choco_Product.Value,
+                S_Straw_Product.Value, S_Vanilla_Product.Value,
+                C_Choco_Product.Value, C_Straw_Product.Value, C_Vanilla_Product.Value,
+                B_Choco_Product.Value, B_Straw_Product.Value, B_Vanilla_Product.Value });
             form4.Show();
         }
 
         private void metroTabPage2_Click(object sender, EventArgs e)
         {
-            GraphForm form4 = new GraphForm();
+            GraphForm form4 = new GraphForm(new string[] { "초코바",
+                "딸기바", "바닐라바",
+                "초코콘", "딸기콘", "바닐라콘",
+                "초코통아이스크림", "딸기통아이스크림", "바닐라통아이스크림"
+            }, new int[] { S_Choco_Product.Value,
+                S_Straw_Product.Value, S_Vanilla_Product.Value,
+                C_Choco_Product.Value, C_Straw_Product.Value, C_Vanilla_Product.Value,
+                B_Choco_Product.Value, B_Straw_Product.Value, B_Vanilla_Product.Value });
             form4.Show();
         }
 
