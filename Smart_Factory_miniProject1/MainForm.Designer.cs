@@ -275,6 +275,7 @@ namespace Smart_Factory_miniProject1
             this.guna2Button2.Animated = true;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Enabled = false;
             this.guna2Button2.FillColor = System.Drawing.Color.Aquamarine;
             this.guna2Button2.Font = new System.Drawing.Font("MD개성체", 18F);
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
@@ -286,6 +287,7 @@ namespace Smart_Factory_miniProject1
             this.guna2Button2.Size = new System.Drawing.Size(176, 56);
             this.guna2Button2.TabIndex = 3;
             this.guna2Button2.Text = "생산 중단";
+            this.guna2Button2.Visible = false;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
@@ -1100,7 +1102,6 @@ namespace Smart_Factory_miniProject1
             // metroToolTip1
             // 
             this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Pink;
-            this.metroToolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.metroToolTip1_Popup);
             // 
             // label1
             // 

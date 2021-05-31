@@ -37,7 +37,7 @@ namespace Smart_Factory_miniProject1
             InitializeComponent();
             this.BackColor= Color.FromArgb(15, 20, 42);
             timer1.Start();
-            string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=211.114.29.160)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=system;Password=1234;";
+            string strConn = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=220.69.249.218)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)));User Id=system;Password=1234;";
 
             // 오라클 연결
             conn = new OracleConnection(strConn);
@@ -198,18 +198,26 @@ namespace Smart_Factory_miniProject1
         }
 
         
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)//생산시작 버튼 클릭 이벤트
         {
             
             if (select1 != "" && select2 != "" && select3 != ""&&flavour.Value>0&&scb.Value>0&&package.Value>0&&!flag) { 
                     
                 flag = true;
+                guna2Button2.Enabled = true;
+                guna2Button2.Visible = true;
                 guna2CircleProgressBar2.Maximum = (amount > 0) ? amount : new int[]{ flavour.Value,scb.Value,package.Value}.Min();
                 metroLabel1.Text = "목표량 : " + guna2CircleProgressBar2.Maximum;
                 t1 = new Thread(new ThreadStart(Run));
                 t1.Start();
-                
-  
+                guna2Button1.Enabled = false;
+                guna2Button1.Visible = false;
+                btnADDForm.Enabled = false;
+                btnADDForm.Visible = false;
+                btnSelectForm.Enabled = false;
+                btnSelectForm.Visible = false;
+
+
             }
         }
         private void useIngredient(Guna.UI2.WinForms.Guna2CircleProgressBar pb, int id)
@@ -378,6 +386,14 @@ namespace Smart_Factory_miniProject1
                     metroLabel1.Text = "";
                     Application.DoEvents();
                     performance = 0;
+                    guna2Button1.Enabled = true;
+                    guna2Button1.Visible = true;
+                    btnADDForm.Enabled = true;
+                    btnADDForm.Visible = true;
+                    btnSelectForm.Enabled = true;
+                    btnSelectForm.Visible = true;
+                    guna2Button2.Enabled = false;
+                    guna2Button2.Visible = false;
                 }
             }
            
@@ -395,9 +411,17 @@ namespace Smart_Factory_miniProject1
             metroLabel1.Text = "";
             Application.DoEvents();
             performance = 0;
-            
+            guna2Button1.Enabled = true;
+            guna2Button1.Visible = true;
+            btnADDForm.Enabled = true;
+            btnADDForm.Visible = true;
+            btnSelectForm.Enabled = true;
+            btnSelectForm.Visible = true;
+            guna2Button2.Enabled = false;
+            guna2Button2.Visible = false;
+
         }
-        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        private void guna2GroupBox2_Click(object sender, EventArgs e)// 재료 그룹박스 클릭 이벤트
         {
             Choco_Label.Text = Choco_Soft.Value.ToString() + "/" + Choco_Soft.Maximum.ToString();
             Straw_Label.Text = Straw_Soft.Value.ToString() + "/" + Straw_Soft.Maximum.ToString();
@@ -425,7 +449,7 @@ namespace Smart_Factory_miniProject1
             Plastic_Label.Visible = !Plastic_Label.Visible;
         }
 
-        private void btnADDForm_Click(object sender, EventArgs e)
+        private void btnADDForm_Click(object sender, EventArgs e) // 재료 추가 버튼 클릭 이벤트
         {
             if (!flag)
             {
@@ -443,7 +467,7 @@ namespace Smart_Factory_miniProject1
             }
         }
 
-        private void metroTabPage1_Click(object sender, EventArgs e)
+        private void metroTabPage1_Click(object sender, EventArgs e) // 생산량 탭 클릭 이벤트
         {
             GraphForm form4 = new GraphForm(new string[] { "초코바",
                 "딸기바", "바닐라바",
@@ -456,7 +480,22 @@ namespace Smart_Factory_miniProject1
             form4.Show();
         }
 
-        private void metroTabPage3_Click(object sender, EventArgs e)
+        private void metroTabPage3_Click(object sender, EventArgs e)// 생산량 탭 클릭 이벤트
+        
+            {
+            GraphForm form4 = new GraphForm(new string[] { "초코바",
+                "딸기바", "바닐라바",
+                "초코콘", "딸기콘", "바닐라콘",
+                "초코통아이스크림", "딸기통아이스크림", "바닐라통아이스크림"
+            }, new int[] { S_Choco_Product.Value,
+                S_Straw_Product.Value, S_Vanilla_Product.Value,
+                C_Choco_Product.Value, C_Straw_Product.Value, C_Vanilla_Product.Value,
+                B_Choco_Product.Value, B_Straw_Product.Value, B_Vanilla_Product.Value });
+            form4.Show();
+        }
+
+        private void metroTabPage2_Click(object sender, EventArgs e)// 생산량 탭 클릭 이벤트
+        
         {
             GraphForm form4 = new GraphForm(new string[] { "초코바",
                 "딸기바", "바닐라바",
@@ -469,25 +508,9 @@ namespace Smart_Factory_miniProject1
             form4.Show();
         }
 
-        private void metroTabPage2_Click(object sender, EventArgs e)
-        {
-            GraphForm form4 = new GraphForm(new string[] { "초코바",
-                "딸기바", "바닐라바",
-                "초코콘", "딸기콘", "바닐라콘",
-                "초코통아이스크림", "딸기통아이스크림", "바닐라통아이스크림"
-            }, new int[] { S_Choco_Product.Value,
-                S_Straw_Product.Value, S_Vanilla_Product.Value,
-                C_Choco_Product.Value, C_Straw_Product.Value, C_Vanilla_Product.Value,
-                B_Choco_Product.Value, B_Straw_Product.Value, B_Vanilla_Product.Value });
-            form4.Show();
-        }
+       
 
-        private void metroToolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_MouseHover(object sender, EventArgs e)
+        private void guna2Button1_MouseHover(object sender, EventArgs e) // 생산버튼에 마우스 올렸을때,
         {
             
             if (select1 == "" && select2 == "" && select3 == "") { metroToolTip1.SetToolTip(guna2Button1, "재료가 선택되지 않았습니다. 재료 선택 버튼을 눌러 재료를 선택해주세요."); }
@@ -506,12 +529,14 @@ namespace Smart_Factory_miniProject1
             conn.Close();
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e) //생산종료 버튼 클릭 이벤트
         {
             if (flag)
             {
+                
                 producing.Text = product + " 생산을 종료합니다.";
                 productStop();
+
                 
             }
             
@@ -538,7 +563,7 @@ namespace Smart_Factory_miniProject1
 
         }
 
-        private void btnSelectForm_Click(object sender, EventArgs e)
+        private void btnSelectForm_Click(object sender, EventArgs e)// 재료선택 버튼 클릭 이벤트
         {
             if (!flag)
             {
